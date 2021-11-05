@@ -1,0 +1,138 @@
+
+body,html{
+    height: 768px;
+	width: 1024px;
+	background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(12,12,156,1) 18%, rgba(0,212,255,1) 100%);
+	
+}
+
+videoContainer{
+    margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+video{
+    width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+.container{
+	background-color: #333;
+	background-color: rgb(221, 219, 253);
+	border-radius: 36pc;
+	
+}
+ul { 
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+	padding-right: 50px;
+
+  }
+  
+li a {
+	display: inline-block;
+	align-items: space-between;
+	color: black;
+	text-align: center;
+	padding: 14px 28px;
+	text-decoration: none;
+  }
+  
+li a:hover {
+	border: white groove;
+	border-radius: 30px;
+  }
+
+.fitLogo{
+	width: 55px;
+	position: relative;
+	left: 95%;
+	display: inline-block;
+}
+
+footer {
+	width: 1024px;
+	bottom:15%;
+	position:relative;
+	text-align: center;
+	align-content: center;
+}
+
+.logoInicial{
+	margin: 10% auto;
+	text-align: center;
+
+}
+
+
+footer a {
+	color: rgb(216, 199, 199);
+	
+}
+
+footer ul {
+	display: inline-block;
+}
+
+table{
+	width: 1024px;
+	margin-top: 0px;
+	height: 500px;
+}
+
+div, header, table{
+	margin: 0px;
+	padding: 0px;
+}
+
+.scroll {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+
+h2{
+	margin: 0;
+}
+td{
+	height:650px;
+}
+
+.novo, h3{
+	display: inline-block;
+	margin: 25px;
+	
+}
+
+.novo{
+	border-color: aliceblue;
+	border-radius: 36px;
+	border-style: groove;
+	padding: 2%;
+}
+
+.chamada{
+	text-align: center;
+	color: rgb(209, 197, 197);
+}
+
+h2, h3{
+	color: rgb(2, 1, 10);
+}
+
+.listaContactos a{
+	text-decoration: none;
+	color: rgb(209, 197, 197);
+	display: inline-block;
+	margin: 20px;
+}
