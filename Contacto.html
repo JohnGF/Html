@@ -5,7 +5,7 @@
 
 <head>
  
-  <title>Iniciar Reunião</title>
+  <title>Projeto IC</title>
   
 </head>
 
@@ -55,7 +55,7 @@
           <div class="scroll">
             <h2>Lista de Contactos </h2><hr> 
             <h3>Grupos</h3> <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-            <a href="Contacto.html">Projeto IC</a> <br> <a href="">Amigos</a> <br> <a href="">Família</a> <br>
+            <a href="">Projeto IC</a> <br> <a href="">Amigos</a> <br> <a href="">Família</a> <br>
             <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
             <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
             <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
@@ -63,12 +63,29 @@
           
         </td>
 
-        <td><img src="Resources\Logo.png" height="500"/></td>
+        <td class= "chamada">
+            <div class="functions">
+                <a href="">Mute</a>
+                <a href="">Audio</a>
+                <a href="">Cam</a>
+                <a href="Chat.html" onclick="abreChat()">Chat</a>
+                <a href="">Share Screen</a>
+                <a href="IniciarReuniao.html" id = "leaveButton">Leave</a>
+              </div>
+        </td>
         </tr>
         </tbody>
     </table>
 
-
+    <script>
+      function abreChat() {
+        document.getElementById("chat").style.display = "block";
+      }
+      
+      function fechaChat() {
+        document.getElementById("chat").style.display = "none";
+      }
+    </script>
 
 
 

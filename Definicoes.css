@@ -92,8 +92,18 @@ div, header, table{
 	padding: 0px;
 }
 
-.scroll {
-	width: 100%;
+
+
+td .scroll {
+	width: 256px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+td .listaContactos {
+	width: 256px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -108,9 +118,12 @@ td{
 	height:650px;
 }
 
+a.novo{
+	margin:0px;
+}
+
 .novo, h3{
 	display: inline-block;
-	margin: 25px;
 	
 }
 
@@ -123,7 +136,8 @@ td{
 
 .chamada{
 	text-align: center;
-	color: rgb(209, 197, 197);
+	background-color: rgb(14, 32, 72);
+	width: 760px;
 }
 
 h2, h3{
@@ -135,4 +149,138 @@ h2, h3{
 	color: rgb(209, 197, 197);
 	display: inline-block;
 	margin: 20px;
+}
+
+.functions {
+	background-color: rgb(49, 144, 176);
+	position: absolute;
+	bottom: 0;
+	width: 760px;
+  }
+  
+.functions a {
+	float: left;
+	display: block;
+	color: #eeeeee;
+	text-align: center;
+	padding: 15px 18px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+
+  .functions a:hover {
+	background: #b6e6eb;
+	color: black;
+  }
+
+  #leaveButton{
+	float: right;
+  }
+
+  div .disable {
+	color: currentColor;
+	opacity: 0.5;
+	text-decoration: none;
+  }
+
+  #chat {
+	position: absolute;
+	background-color: white;
+	bottom: 200px;
+	left: 435px;
+	height: 280px;
+	width: 400px;
+  }
+
+  #chatBar{
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	display: block;
+	background-color: rgb(49, 144, 176);
+	margin: 0;
+
+  }
+
+  textarea {
+	position: absolute;
+	bottom: 3px;
+	width: 300px;
+	height: 30px;
+	left: 47px;
+	background-color: rgb(255, 255, 255);
+  	outline: none;
+	border-radius: 10px;
+	resize: none;
+  }
+
+  button.enviaMensagem{
+	border-radius: 25px;
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	cursor: pointer;
+	background-color: rgb(91, 211, 213);
+  }
+
+  button.enviaFicheiros{
+	border-radius: 25px;
+	position: absolute;
+	bottom: 6px;
+	left: 6px;
+	cursor: pointer;
+	background-color: rgb(91, 211, 213);
+  }
+
+  a.fechaJanela{
+	border-radius: 10px;
+	position: absolute;
+	top: 9px;
+	right: 15px;
+	cursor: pointer;
+  }
+
+  img.enviar{
+	max-width:20px;
+    max-height:20px;
+    width: auto;
+    height: auto;
+	
+  }
+
+  img.ficheiros{
+	max-width:20px;
+    max-height:20px;
+    width: auto;
+    height: auto;
+	
+  }
+
+  img.fechar{
+	max-width:20px;
+    max-height:20px;
+    width: auto;
+    height: auto;
+	
+  }
+
+  div#chatBox {
+	width: 350px;
+	height: 170px;
+	background-color: rgb(244, 248, 246);
+	margin-left: 25px;
+	text-align: right;
+  	flex-direction: column-reverse;
+    vertical-align: bottom;
+	display: flex;
+  }
+
+p.paragrafo{
+	align-self: flex-end;
+	background-color: rgb(149, 228, 228);
+	border-style: dashed;
+	padding: 2px;
+	width: max-content;
+	
+	
 }
