@@ -1,6 +1,8 @@
-body, html{
+
+body,html{
     height: 768px;
 	width: 1024px;
+	background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(12,12,156,1) 18%, rgba(0,212,255,1) 100%);
 	
 }
 
@@ -17,6 +19,8 @@ video{
 }
 .container{
 	background-color: #333;
+	background-color: rgb(221, 219, 253);
+	border-radius: 36pc;
 	
 }
 ul { 
@@ -35,31 +39,41 @@ li {
 li a {
 	display: inline-block;
 	align-items: space-between;
-	color: white;
+	color: black;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 14px 28px;
 	text-decoration: none;
   }
   
 li a:hover {
-	background-color: #111;
+	border: white groove;
+	border-radius: 30px;
   }
 
 .fitLogo{
-	width: 60px;
-	float: right
+	width: 55px;
+	position: relative;
+	left: 95%;
+	display: inline-block;
 }
 
 footer {
 	width: 1024px;
-	bottom:0;
-	position:absolute;
+	bottom:15%;
+	position:relative;
 	text-align: center;
 	align-content: center;
 }
 
+.logoInicial{
+	margin: 10% auto;
+	text-align: center;
+
+}
+
+
 footer a {
-	color: rgb(49, 46, 46);
+	color: rgb(216, 199, 199);
 	
 }
 
@@ -70,6 +84,7 @@ footer ul {
 table{
 	width: 1024px;
 	margin-top: 0px;
+	height: 500px;
 }
 
 div, header, table{
@@ -77,7 +92,47 @@ div, header, table{
 	padding: 0px;
 }
 
-#listaContactos {
-	width: 250px;
-	background-color: chocolate;
+.scroll {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+
+h2{
+	margin: 0;
+}
+td{
+	height:650px;
+}
+
+.novo, h3{
+	display: inline-block;
+	margin: 25px;
+	
+}
+
+.novo{
+	border-color: aliceblue;
+	border-radius: 36px;
+	border-style: groove;
+	padding: 2%;
+}
+
+.chamada{
+	text-align: center;
+	color: rgb(209, 197, 197);
+}
+
+h2, h3{
+	color: rgb(2, 1, 10);
+}
+
+.listaContactos a{
+	text-decoration: none;
+	color: rgb(209, 197, 197);
+	display: inline-block;
+	margin: 20px;
 }
