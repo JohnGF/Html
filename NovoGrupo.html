@@ -5,7 +5,7 @@
 
 <head>
  
-  <title>Projeto IC</title>
+  <title>Contactos</title>
   
 </head>
 
@@ -13,8 +13,9 @@
 
 
   <header>
-      <link rel="stylesheet" href="Definicoes.css">  
+      <link rel="stylesheet" href="Definicoes.css"> 
       <script src="script.js"></script>
+   
       <!-- Top header menu containing
           logo and Navigation bar -->
       <div id="top-header">               
@@ -26,7 +27,7 @@
                 <ul> 
                     <li><a href="Projeto.html">Home</a></li>
                     <li><a href="Agenda.html">Agenda</a></li>
-                    <li><a href="#">Contactos</a></li>
+                    <li><a href="ListaContactos.html">Contactos</a></li>
                     <li><a href="#">Definições</a></li>
                     <li><a href="#">Ajuda</a></li>
                     <li>
@@ -63,33 +64,35 @@
           </div>
           
         </td>
-        <td class= "chamada">
 
-          <div id = "chat">
-            <h1 id = "chatBar">Chat</h1><br>
-            <a type="button" class="fechaJanela" href="Contacto.html"><img class="fechar" src="Resources/close.png"></a>
-            <div id = "chatBox" class="scroll">
-
-            </div>
-            <textarea placeholder="Escreva uma mensagem..." id="mensagem" required></textarea>
-            <button type="submit" class="enviaMensagem" onclick="imprimeMensagemChat()"><img class="enviar" src="Resources/enviar.png"></button>
-            <button type="button" class="enviaFicheiros"><img class="ficheiros" src="Resources/anexo.png"></button>
-          </div>
-
-          <div class="functions">
-              <a href="" class = "disable">Mute</a>
-              <a href="" class = "disable">Audio</a>
-              <a href="" class = "disable">Cam</a>
-              <a href="" class = "disable">Chat</a>
-              <a href="" class = "disable">Share Screen</a>
-              <a href="IniciarReuniao.html" id = "leaveButton">Leave</a>
+        <td>
+            <div id = "novoGrupo">
+                <h1 id = "novoGrupoBar">Criar Grupo</h1><br>
+                <a type="button" class="fechaJanela" href="ListaContactos.html"><img class="fechar" src="Resources/close.png"></a>
+            
+            <form id="frmNovoGrupo">
+                <label for="name">Nome do grupo:</label>
+                <input type="text" id="inputNomeGrupo" name="name"><br><br><br><br>
+                <label for="participante">Participantes:</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
+                <label for="carlos"> Carlos</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="David"> 
+                <label for="david"> David</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Joana">  
+                <label for="joana"> Joana</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Maria">
+                <label for="maria"> Maria</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="João">
+                <label for="joao"> João</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Francisco"> 
+                <label for="francisco"> Francisco</label><br><br>
+                <button type="button" id = "botaoCriarGrupo">Criar</button>
+            </form>
             </div>
         </td>
         </tr>
         </tbody>
     </table>
-
-    
 
 </body>
 
