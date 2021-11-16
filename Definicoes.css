@@ -1,11 +1,8 @@
-html{
-background-color: white;
-}
-body{
-    height: 768px;
-	width: 1024px;
+
+body,html{
+    height: 720px;
+	width: 1280px;
 	background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(12,12,156,1) 18%, rgba(0,212,255,1) 100%);
-	margin: auto;
 	
 }
 
@@ -21,8 +18,7 @@ video{
 	background-color: #666;
 }
 .container{
-	background-color: #333;
-	background-color: rgb(221, 219, 253);
+	background-color: #E6E6E6;
 	border-radius: 36pc;
 	
 }
@@ -61,16 +57,17 @@ li a:hover {
 }
 
 footer {
-	width: 1024px;
-	bottom:15%;
+	width: 1280px;
+	bottom:0%;
 	position:relative;
 	text-align: center;
 	align-content: center;
 }
 
 .logoInicial{
-	margin: 10% auto;
+	margin: auto;
 	text-align: center;
+	bottom: 80%;
 
 }
 
@@ -108,7 +105,7 @@ td .scroll {
 td .listaContactos {
 	width: 256px;
     height: 100%;
-    margin: 0;
+
     padding: 0;
     overflow: auto;
 }
@@ -121,9 +118,7 @@ td{
 	height:650px;
 }
 
-a.novo{
-	margin:0px;
-}
+
 
 .novo, h3{
 	display: inline-block;
@@ -143,26 +138,31 @@ a.novo{
 	width: 760px;
 }
 
-h2, h3{
-	color: rgb(2, 1, 10);
+h2{
+	color: #21094E;
 }
+
+h3{
+	color: #C0FEFC;
+	font-size: x-large;
+}
+
 
 .listaContactos a{
 	text-decoration: none;
-	color: rgb(209, 197, 197);
+	color: #EEEEEE;
 	display: inline-block;
-	margin: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 23px;
+	margin-right: 0;
 }
 
 .functions {
-	background-color: rgb(49, 144, 176) ; 
-	color: white;
-	border: #333;
-	position: sticky;
-	box-sizing:border-box;
-	top: 100%;
+	background-color: rgb(49, 144, 176);
+	position: absolute;
+	bottom: 0;
 	width: 760px;
-	height: 50px;
   }
   
 .functions a {
@@ -191,7 +191,7 @@ h2, h3{
   }
 
   #chat {
-	position: sticky;
+	position: absolute;
 	background-color: white;
 	bottom: 200px;
 	left: 435px;
@@ -284,10 +284,104 @@ h2, h3{
 
 p.paragrafo{
 	align-self: flex-end;
-	background-color: rgb(149, 228, 228);
-	border-style: dashed;
-	padding: 2px;
+	background-color: #A2D2FF;
+	border-style: groove;
+	margin: 15px;
+	padding: 6px 15px;
 	width: max-content;
+	border-radius: 36px;
+}
+
+#novoGrupo {
+	position: absolute;
+	background-color: white;
+	bottom: 100px;
+	left: 435px;
+	height: 500px;
+	width: 400px;
+  }
+
+#novoGrupoBar{
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	display: block;
+	background-color: rgb(49, 144, 176);
+	margin: 0;
+}
+
+
+form{
+	text-align: center;
+	margin-top: 8%;
+}
+
+
+#conversa{
+	position: relative;
+	background-color: white;
+	margin-top: -6%;
+	right: 0px;
+	height: 550px;
+	width: 1010px;
 	
-	
+}
+
+.descricaoGrupo{
+	position: relative;
+	top: -45px;
+	margin-bottom: 0;
+	right: 0.5%;
+	background-color: #516bcc;
+	width: 998px;
+	padding: 1%;
+	border-bottom-left-radius: 36px;
+	border-bottom-right-radius: 36px;
+	z-index: 1;
+
+}
+
+#caixaConversa{
+	width: 96%;
+	height: 460px;
+	background-color: rgb(244, 248, 246);
+	margin-left: 25px;
+	text-align: right;
+  	flex-direction: column-reverse;
+    vertical-align: bottom;
+	display: flex;
+}
+
+#mensagemConversa{
+	position: absolute;
+	bottom: 3px;
+	width: 880px;
+	height: 50px;
+	left: 65px;
+	background-color: rgb(255, 255, 255);
+  	outline: none;
+	border-radius: 10px;
+	resize: none;
+}
+
+.descricaoGrupo button{
+	height: 50px;
+}
+
+
+#participantes{
+	font-size: larger;
+	padding: 0;
+	margin: 11px;
+    color: #bbb9b9;
+
+}
+
+#nomeGrupo{
+	font-size: xx-large;
+	padding: 0;
+	margin: 12px;
+	color: #E6E6E6;
+
+
 }
