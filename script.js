@@ -144,3 +144,8 @@ function gravaNoHistorico(userInfo) {
     baseDeDados.push(userInfo);
     gravaHistorico();
 }
+
+function compartilhaTela() {
+    document.getElementsByTagName("BODY")[0].style.border = "thick solid red";
+}
+

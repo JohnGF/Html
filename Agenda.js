@@ -2,6 +2,13 @@ let calendar = document.querySelector('.calendar')
 
 const month_names = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
 "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+//useless
+function event_window(){
+    console.log(e.target.id)
+    document.getElementById(id).innerHTML = new HTML
+}
+
+
 
 isLeapYear = (year) => {
     return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 ===0)
@@ -35,6 +42,7 @@ generateCalendar = (month, year) => {
     for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
         let day = document.createElement('div')
         day.setAttribute("id",i+""+month+""+year)
+        //day.click=event_window
         if (i >= first_day.getDay()) {
 
             day.classList.add('calendar-day-hover')
@@ -101,5 +109,6 @@ window.onclick = e => {
     let chave=e.target.id
     if (chave > 0){
         sessionStorage.setItem(chave,"Blablabla Eventos")
+    
 }
 }
