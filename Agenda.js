@@ -3,11 +3,25 @@ let calendar = document.querySelector('.calendar')
 const month_names = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
 "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 //useless
-function event_window(){
-    console.log(e.target.id)
-    document.getElementById(id).innerHTML = new HTML
-}
+let text=document.querySelector("#eventos_dia")
+let s_day_id=0
+function event_window(id){
+    s_day_id = id
+    if (sessionStorage.getItem(id)!==null)
+    {text.value=sessionStorage.getItem(id)}
+    else
+    text.value=null
+    
+    return console.log(id)
 
+    //document.getElementById(id).innerHTML = new HTML
+    //sessionStorage.setItem(id,window.prompt("Enter your name: "))
+}
+function eventos_dia(key){
+    sessionStorage.setItem(key,text.value)  
+}
+const b_salvar=document.querySelector(".salvar")
+b_salvar.addEventListener("click",function(){eventos_dia(s_day_id)})
 
 
 isLeapYear = (year) => {
@@ -41,8 +55,10 @@ generateCalendar = (month, year) => {
 
     for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
         let day = document.createElement('div')
-        day.setAttribute("id",i+""+month+""+year)
-        //day.click=event_window
+        let id = i+""+month+""+year
+        day.setAttribute("id",id)
+        day.onclick=function(){event_window(id)}
+        //day.addEventListener("click",eventos_dia(id),false)
         if (i >= first_day.getDay()) {
 
             day.classList.add('calendar-day-hover')
@@ -104,11 +120,11 @@ dark_mode_toggle.onclick = () => {
 //let dia_selecionado = document.querySelector(".calendar-days ")
 //let dias = dia_selecionado.children
 //Clicar no quadrado
-window.onclick = e => {
-    console.log(e.target.id)
-    let chave=e.target.id
-    if (chave > 0){
-        sessionStorage.setItem(chave,"Blablabla Eventos")
+// window.onclick = e => {
+//     console.log(e.target.id)
+//     let chave=e.target.id
+//     if (chave > 0){
+//         sessionStorage.setItem(chave,"Blablabla Eventos")
     
-}
-}
+// }
+// }
