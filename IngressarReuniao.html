@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang = "pt">
+<!-- Header Menu of the Page -->
+
+<head>
+ 
+  <title>ingressar Reunião</title>
+  
+</head>
+
+<body>
+
+
+  <header>
+      <link rel="stylesheet" href="Definicoes.css">
+      <!-- Top header menu containing
+          logo and Navigation bar -->
+      <div id="top-header">               
+          <!-- Navigation Menu -->
+          <nav>
+            <div class="container">
+              
+              <div class="menuLeft">
+                <ul> 
+                  <li><a href="Projeto.html"><b>Home</b></a></li>
+                  <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                  <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                  <li><a href="#"><b>Definições</b></a></li>
+                  <li><a href="#"><b>Ajuda</b></a></li>
+                  <li class="logoBar">
+                      <div class="menuRight">
+                        <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
+        
+                      </div>
+                    </li>
+                    <li></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      </div>   
+      <!-- Image menu in Header to contain an Image and
+          a sample text over that image -->
+      <div id="header-image-menu">
+  
+      </div>
+  
+  </header>
+
+
+  <div id = "ingressarReuniao">
+    <h1 id = "ingressarReuniaoBar">Ingressar Reunião</h1><br>
+    <a type="button" class="fechaJanela" href="Projeto.html"><img class="fechar" src="Resources/close.png"></a>
+
+    <form id="frmIngressarReuniao" action = "./Contacto.html" >
+
+        <label for="participante">Reuniões:</label><br><br>  
+
+        <div class="scroll">
+
+        
+            <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
+            <label for="carlos"> IC002</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Família</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Amigos</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Projeto IC</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
+            <label for="carlos"> IC002</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Família</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Amigos</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Projeto IC</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
+            <label for="carlos"> IC002</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Família</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Amigos</label><br><br>
+            <input type="checkbox" classe="participante" name="participante" value="David"> 
+            <label for="david"> Projeto IC</label><br><br>
+
+        </div>
+
+        <button type="button" id = "botaoCriarGrupo" onclick="location.href='Contacto.html';">Ingressar</button>
+    </form>
+  </div>
+  
+
+</body>
+
+</html>

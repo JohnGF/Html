@@ -1,9 +1,13 @@
 
 body,html{
     height: 720px;
-	width: 1280px;
-	background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(12,12,156,1) 18%, rgba(0,212,255,1) 100%);
-	
+	width: 1240px;
+	background-color: #D4ECDD;
+	margin: 0;
+}
+
+li.logoBar{
+	float: right;
 }
 
 videoContainer{
@@ -18,15 +22,19 @@ video{
 	background-color: #666;
 }
 .container{
-	background-color: #E6E6E6;
-	border-radius: 36pc;
-	
+	background-color: #345B63;
+	margin: 0;
 }
 ul { 
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+header a {
+	font-size: x-large;
+
 }
 
 li {
@@ -38,7 +46,7 @@ li {
 li a {
 	display: inline-block;
 	align-items: space-between;
-	color: black;
+	color: #D4ECDD;
 	text-align: center;
 	padding: 14px 28px;
 	text-decoration: none;
@@ -57,7 +65,7 @@ li a:hover {
 }
 
 footer {
-	width: 1280px;
+	width: 1240px;
 	bottom:0%;
 	position:relative;
 	text-align: center;
@@ -73,18 +81,23 @@ footer {
 
 
 footer a {
-	color: rgb(216, 199, 199);
-	
+	color: #D4ECDD;
+	background-color:#345B63;
+	border-radius: 25px;
+	width: 200px;
+    height: 30px;
 }
 
 footer ul {
 	display: inline-block;
+	
 }
 
 table{
-	width: 1024px;
-	margin-top: 0px;
+	width: 1240px;
 	height: 500px;
+	border-spacing: 0;
+	margin-top: 10px;
 }
 
 div, header, table{
@@ -95,30 +108,31 @@ div, header, table{
 
 
 td .scroll {
-	width: 256px;
     height: 100%;
-    margin: 0;
+    margin-top: 10px;
+	margin-left: 10px;
     padding: 0;
     overflow: auto;
 }
 
 td .listaContactos {
-	width: 256px;
+	width: 200px;
     height: 100%;
-
+	margin-left: 10px;
     padding: 0;
     overflow: auto;
 }
 
 
-h2{
-	margin: 0;
-}
 td{
-	height:650px;
+	height:615px;
 }
 
-
+a.novo{
+	background-color: #3d6a74;
+	border-color: #112031;
+	margin-right: 5px;
+}
 
 .novo, h3{
 	display: inline-block;
@@ -134,17 +148,35 @@ td{
 
 .chamada{
 	text-align: center;
-	background-color: rgb(14, 32, 72);
-	width: 760px;
+	background-color: #b1b3b3;
+	background-image: url("./Resources/vc.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+	width: 930px;
+	padding: 0;
+}
+
+td.logo{
+	text-align: center;
 }
 
 h2{
-	color: #21094E;
+	color: #9baca2;
+	margin: 0;
 }
 
-h3{
-	color: #C0FEFC;
+h3 {
+	color: #D4ECDD;
 	font-size: x-large;
+}
+
+.listaContactos{
+	background-color: #152D35;
+	border-radius: 36px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	width: 300px;
 }
 
 
@@ -156,13 +188,15 @@ h3{
 	margin-bottom: 20px;
 	margin-left: 23px;
 	margin-right: 0;
+	font-size: large;
 }
 
 .functions {
-	background-color: rgb(49, 144, 176);
+	background-color: #345B63;
 	position: absolute;
 	bottom: 0;
-	width: 760px;
+	width: 935px;
+	height: 60px;
   }
   
 .functions a {
@@ -170,15 +204,24 @@ h3{
 	display: block;
 	color: #eeeeee;
 	text-align: center;
-	padding: 15px 18px;
+	width: 55px;
+	height: 55px;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-right: 10px;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 20px;
   }
 
   .functions a:hover {
 	background: #b6e6eb;
 	color: black;
   }
+
+  img.function{
+	max-width: 50px;
+	max-height: 50px;
+}
 
   #leaveButton{
 	float: right;
@@ -191,114 +234,124 @@ h3{
   }
 
   #chat {
-	position: absolute;
-	background-color: white;
-	bottom: 200px;
-	left: 435px;
-	height: 280px;
-	width: 400px;
-  }
+    position: absolute;
+    background-color: white;
+    bottom: 180px;
+    left: 520px;
+    height: 350px;
+    width: 500px;
+	border-radius: 2em;
+}
 
   #chatBar{
 	padding: 10px;
 	font-size: 20px;
 	text-align: left;
 	display: block;
-	background-color: rgb(49, 144, 176);
+	background-color: #152D35;
+	color: #9baca2;
 	margin: 0;
+	border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 
   }
 
   textarea {
 	position: absolute;
-	bottom: 3px;
-	width: 300px;
-	height: 30px;
-	left: 47px;
+	bottom: 10px;
+    width: 365px;
+    height: 30px;
+    left: 65px;
 	background-color: rgb(255, 255, 255);
   	outline: none;
 	border-radius: 10px;
 	resize: none;
+	font-size: 16px;
   }
 
   button.enviaMensagem{
 	border-radius: 25px;
 	position: absolute;
-	bottom: 6px;
-	right: 6px;
-	cursor: pointer;
-	background-color: rgb(91, 211, 213);
+	bottom: 10px; 
+	right: 10px;
+	width: 40px;
+	height: 35px;
+    cursor: pointer;
+    background-color: #63bbb5;
   }
 
   button.enviaFicheiros{
 	border-radius: 25px;
 	position: absolute;
-	bottom: 6px;
-	left: 6px;
-	cursor: pointer;
-	background-color: rgb(91, 211, 213);
+	bottom: 10px; 
+	left: 10px;
+	width: 40px;
+	height: 35px;
+    cursor: pointer;
+    background-color: #63bbb5;
   }
 
   a.fechaJanela{
 	border-radius: 10px;
 	position: absolute;
 	top: 9px;
-	right: 15px;
+	right: 25px;
 	cursor: pointer;
   }
 
   img.enviar{
-	max-width:20px;
-    max-height:20px;
+	max-width:25px;
+    max-height:25px;
     width: auto;
     height: auto;
 	
   }
 
   img.ficheiros{
-	max-width:20px;
-    max-height:20px;
+	max-width:25px;
+    max-height:25px;
     width: auto;
     height: auto;
 	
   }
 
   img.fechar{
-	max-width:20px;
-    max-height:20px;
+	max-width:25px;
+    max-height:25px;
     width: auto;
     height: auto;
 	
   }
 
   div#chatBox {
-	width: 350px;
-	height: 170px;
-	background-color: rgb(244, 248, 246);
-	margin-left: 25px;
-	text-align: right;
-  	flex-direction: column-reverse;
+    width: 450px;
+    height: 215px;
+    background-color: rgb(255 255 255);
+    margin-left: 25px;
+    text-align: right;
+    flex-direction: column-reverse;
     vertical-align: bottom;
-	display: flex;
-  }
+    display: flex;
+}
 
-p.paragrafo{
-	align-self: flex-end;
-	background-color: #A2D2FF;
-	border-style: groove;
-	margin: 15px;
-	padding: 6px 15px;
-	width: max-content;
-	border-radius: 36px;
+p.paragrafo {
+    align-self: flex-end;
+    background-color: #D4ECDD;
+    margin: 5px;
+    padding: 6px 15px;
+    width: max-content;
+    border-radius: 36px;
+	font-size: 20px;
 }
 
 #novoGrupo {
 	position: absolute;
 	background-color: white;
 	bottom: 100px;
-	left: 435px;
+	left: 560px;
 	height: 500px;
-	width: 400px;
+	width: 410px;
+	border-radius: 2em;
   }
 
 #novoGrupoBar{
@@ -306,8 +359,11 @@ p.paragrafo{
 	font-size: 20px;
 	text-align: left;
 	display: block;
-	background-color: rgb(49, 144, 176);
+	background-color: #152D35;
 	margin: 0;
+	color:#9baca2;
+	border-top-left-radius:  1em;
+	border-top-right-radius:  1em;
 }
 
 
@@ -322,18 +378,18 @@ form{
 	background-color: white;
 	margin-top: -6%;
 	right: 0px;
-	height: 550px;
-	width: 1010px;
+	height: 570px;
+	width: 936px;
 	
 }
 
 .descricaoGrupo{
 	position: relative;
-	top: -45px;
+	top: -20px;
 	margin-bottom: 0;
 	right: 0.5%;
-	background-color: #516bcc;
-	width: 998px;
+	background-color: #112031;
+	width: 923px;
 	padding: 1%;
 	border-bottom-left-radius: 36px;
 	border-bottom-right-radius: 36px;
@@ -354,14 +410,15 @@ form{
 
 #mensagemConversa{
 	position: absolute;
-	bottom: 3px;
-	width: 880px;
-	height: 50px;
-	left: 65px;
+	bottom: 7px;
+	width: 780px;
+	height: 60px;
+	left: 75px;
 	background-color: rgb(255, 255, 255);
   	outline: none;
 	border-radius: 10px;
 	resize: none;
+	font-size: 19px;
 }
 
 .descricaoGrupo button{
@@ -382,6 +439,29 @@ form{
 	padding: 0;
 	margin: 12px;
 	color: #E6E6E6;
-
-
 }
+
+.participantesGrupo{
+	text-align: left;
+	width:150px;
+	height: 230px;
+	overflow-y: scroll;
+	margin-left: 160px;
+	
+}
+
+button#botaoCriarGrupo{
+	font-size: 20px;
+    background-color: #345B63;
+    width: 80px;
+    height: 40px;
+    border-radius: 2em;
+    color: #D4ECDD;
+    border: #152D35 solid 3px;
+	
+}
+
+h4 {
+	margin: 0;
+}
+

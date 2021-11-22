@@ -5,7 +5,7 @@
 
 <head>
  
-  <title>Projeto IC</title>
+  <title>Chat</title>
   
 </head>
 
@@ -15,6 +15,7 @@
   <header>
       <link rel="stylesheet" href="Definicoes.css">  
       <script src="script.js"></script>
+      <script src="scriptConversa.js"></script>
       <!-- Top header menu containing
           logo and Navigation bar -->
       <div id="top-header">               
@@ -24,12 +25,12 @@
               
               <div class="menuLeft">
                 <ul> 
-                    <li><a href="Projeto.html">Home</a></li>
-                    <li><a href="Agenda.html">Agenda</a></li>
-                    <li><a href="#">Contactos</a></li>
-                    <li><a href="#">Definições</a></li>
-                    <li><a href="#">Ajuda</a></li>
-                    <li>
+                  <li><a href="Projeto.html"><b>Página Inicial</b></a></li>
+                  <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                  <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                  <li><a href="#"><b>Definições</b></a></li>
+                  <li><a href="#"><b>Ajuda</b></a></li>
+                  <li class="logoBar">
                       <div class="menuRight">
                         <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
         
@@ -55,11 +56,23 @@
         <td class = "listaContactos"> 
           <div class="scroll">
             <h2>Lista de Contactos </h2><hr> 
-            <h3>Grupos</h3> <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-            <a href="">Projeto IC</a> <br> <a href="">Amigos</a> <br> <a href="">Família</a> <br>
+            <h3>Grupos</h3> 
+            <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+            <a href="">Projeto IC</a> <br> 
+            <a href="">Amigos</a> <br> 
+            <a href="">Família</a> <br>
+            <a href="">IC002</a> <br>
             <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
-            <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
-            <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
+            <a href="">Carlos</a> <br>
+            <a href="">David</a> <br>
+            <a href="">Filipe</a> <br> 
+            <a href="">Francisco</a> <br>
+            <a href="">João</a> <br>
+            <a href="">Joana</a> <br>
+            <a href="">Leonor</a> <br>
+            <a href="">Mafalda</a> <br>
+            <a href="">Maria</a> <br> 
+            <a href="">Rui</a> <br>
           </div>
           
         </td>
@@ -67,22 +80,22 @@
 
           <div id = "chat">
             <h1 id = "chatBar">Chat</h1><br>
-            <a type="button" class="fechaJanela" href="Contacto.html"><img class="fechar" src="Resources/close.png"></a>
+            <a type="button" class="fechaJanela" href="Contacto.html"><img class="fechar" src="Resources/back.png"></a>
             <div id = "chatBox" class="scroll">
 
             </div>
             <textarea placeholder="Escreva uma mensagem..." id="mensagem" required></textarea>
-            <button type="submit" class="enviaMensagem" onclick="imprimeMensagemChat()"><img class="enviar" src="Resources/enviar.png"></button>
-            <button type="button" class="enviaFicheiros"><img class="ficheiros" src="Resources/anexo.png"></button>
+            <button type="submit" class="enviaMensagem" onclick="imprimeMensagem('mensagem', 'chatBox')"><img class="enviar" src="Resources/enviar.png"></button>
+            <button type="button" class="enviaFicheiros" onclick="enviaFicheiro('mensagem', 'chatBox', 'trabalhofinal.pdf')"><img class="ficheiros" src="Resources/anexo.png"></button>
           </div>
 
-          <div class="functions">
-              <a href="" class = "disable">Mute</a>
-              <a href="" class = "disable">Audio</a>
-              <a href="" class = "disable">Cam</a>
-              <a href="" class = "disable">Chat</a>
-              <a href="" class = "disable">Share Screen</a>
-              <a href="IniciarReuniao.html" id = "leaveButton">Leave</a>
+            <div class="functions">
+              <a class = "disable" href=""><img class="function" src="Resources/Mute.png"></a>
+              <a class = "disable" href=""><img class="function" src="Resources/audio_mute.png"></a>
+              <a class = "disable" href=""><img class="function" src="Resources/cam.png"></a>
+              <a class = "disable" href="Chat.html" onclick="abreChat()"><img class="function" src="Resources/chat.png"></a>
+              <a class = "disable" onclick="compartilhaTela()"><img class="function" src="Resources/sharescreen.png"></a>
+              <a href="IniciarReuniao.html" id = "leaveButton"><img class="function" src="Resources/leave.png"></a>
             </div>
         </td>
         </tr>

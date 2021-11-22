@@ -327,8 +327,14 @@ body {
     top: 20px;
 
 }
-.Event_box  #text_area{
-    position: absolute;
+.Event_box  #eventos_dia{
+    position: relative;
     left: 20px;
     top: 50px;
+}
+.Event_box .salvar{
+position: relative;
+top: 100px;
+left: 20px;
+border-radius: 25px;
 }

@@ -5,7 +5,7 @@
 
 <head>
  
-  <title>Projeto IC</title>
+  <title>Chamada</title>
   
 </head>
 
@@ -25,12 +25,12 @@
               
               <div class="menuLeft">
                 <ul> 
-                    <li><a href="Projeto.html">Home</a></li>
-                    <li><a href="Agenda.html">Agenda</a></li>
-                    <li><a href="#">Contactos</a></li>
-                    <li><a href="#">Definições</a></li>
-                    <li><a href="#">Ajuda</a></li>
-                    <li>
+                  <li><a href="Projeto.html"><b>Página Inicial</b></a></li>
+                  <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                  <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                  <li><a href="#"><b>Definições</b></a></li>
+                  <li><a href="#"><b>Ajuda</b></a></li>
+                  <li class="logoBar">
                       <div class="menuRight">
                         <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
         
@@ -52,27 +52,39 @@
 
     <table>
         <tbody>
-        <tr> <br>
-        <td class = "listaContactos"> 
-          <div class="scroll">
-            <h2>Lista de Contactos </h2><hr> 
-            <h3>Grupos</h3> <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-            <a href="">Projeto IC</a> <br> <a href="">Amigos</a> <br> <a href="">Família</a> <br>
-            <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
-            <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
-            <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
-          </div>
-          
-        </td>
+          <tr> <br>
+            <td class = "listaContactos"> 
+              <div class="scroll">
+                <h2>Lista de Contactos </h2><hr> 
+                <h3>Grupos</h3> 
+                <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+                <a href="Contacto.html">Projeto IC</a> <br> 
+                <a href="">Amigos</a> <br> 
+                <a href="">Família</a> <br>
+                <a href="Contacto.html">IC002</a> <br>
+                <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
+                <a href="">Carlos</a> <br>
+                <a href="">David</a> <br>
+                <a href="">Filipe</a> <br> 
+                <a href="">Francisco</a> <br>
+                <a href="">João</a> <br>
+                <a href="">Joana</a> <br>
+                <a href="">Leonor</a> <br>
+                <a href="">Mafalda</a> <br>
+                <a href="">Maria</a> <br> 
+                <a href="">Rui</a> <br>   
+              </div>
+              
+            </td>
 
         <td class= "chamada">
             <div class="functions">
-                <a href="">Mute</a>
-                <a href="">Audio</a>
-                <a href="">Cam</a>
-                <a href="Chat.html" onclick="abreChat()">Chat</a>
-                <a href="">Share Screen</a>
-                <a href="IniciarReuniao.html" id = "leaveButton">Leave</a>
+                <a href=""><img class="function" src="Resources/Mute.png"></a>
+                <a href=""><img class="function" src="Resources/audio_mute.png"></a>
+                <a href=""><img class="function" src="Resources/cam.png"></a>
+                <a href="Chat.html" onclick="abreChat()"><img class="function" src="Resources/chat.png"></a>
+                <a onclick="compartilhaTela()"><img class="function" src="Resources/sharescreen.png"></a>
+                <a href="IniciarReuniao.html" id = "leaveButton"><img class="function" src="Resources/leave.png"></a>
               </div>
         </td>
         </tr>
