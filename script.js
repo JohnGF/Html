@@ -28,27 +28,28 @@ function principal(){
     defineEventHandlersParaElementosHTML()    
 }
 
-
-function imprimeMensagemChat(){  
-    var mensagem=document.getElementById("mensagem").value;  
+function imprimeMensagem(id1,id2){  
+    var mensagem=document.getElementById(id1).value;  
     var resposta = document.createTextNode(mensagem);
-    var div = document.getElementById('chatBox');
+    var div = document.getElementById(id2);
     var paragrafo = document.createElement("p");
     paragrafo.setAttribute("class", "paragrafo");
     paragrafo.appendChild(resposta);
     div.prepend(paragrafo);
-    document.getElementById("mensagem").value = "";    
+    document.getElementById(id1).value = "";    
 }
-
-function imprimeMensagemConversa(){  
-    var mensagem=document.getElementById("mensagemConversa").value;  
-    var resposta = document.createTextNode(mensagem);
-    var div = document.getElementById('caixaConversa');
+    
+function enviaFicheiro(id1,id2, nomeFicheiro){
+    var resposta = document.createTextNode(nomeFicheiro);
+    var div = document.getElementById(id2);
     var paragrafo = document.createElement("p");
     paragrafo.setAttribute("class", "paragrafo");
+    paragrafo.setAttribute("id", "pdf");
     paragrafo.appendChild(resposta);
     div.prepend(paragrafo);
-    document.getElementById("mensagemConversa").value = "";    
+    document.getElementById(id1).value = "";
+    var pdf = document.getElementById("pdf");
+    pdf.innerHTML = '<img class="enviar" src="Resources/pdf.png"> ' + pdf.innerHTML;
 }
     
 

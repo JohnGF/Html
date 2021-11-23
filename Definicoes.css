@@ -4,6 +4,13 @@ body,html{
 	width: 1240px;
 	background-color: #D4ECDD;
 	margin: 0;
+<<<<<<< HEAD
+=======
+}
+
+li.logoBar{
+	float: right;
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 }
 
 videoContainer{
@@ -145,7 +152,15 @@ a.novo{
 .chamada{
 	text-align: center;
 	background-color: #b1b3b3;
+<<<<<<< HEAD
 	width: 938px;
+=======
+	background-image: url("./Resources/vc.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+	width: 930px;
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 	padding: 0;
 }
 
@@ -187,7 +202,12 @@ h3 {
 	background-color: #345B63;
 	position: absolute;
 	bottom: 0;
+<<<<<<< HEAD
 	width: 938px;
+=======
+	width: 935px;
+	height: 60px;
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
   }
   
 .functions a {
@@ -195,7 +215,11 @@ h3 {
 	display: block;
 	color: #eeeeee;
 	text-align: center;
-	padding: 15px 18px;
+	width: 55px;
+	height: 55px;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-right: 10px;
 	text-decoration: none;
 	font-size: 20px;
   }
@@ -204,6 +228,11 @@ h3 {
 	background: #b6e6eb;
 	color: black;
   }
+
+  img.function{
+	max-width: 50px;
+	max-height: 50px;
+}
 
   #leaveButton{
 	float: right;
@@ -248,6 +277,7 @@ h3 {
   	outline: none;
 	border-radius: 10px;
 	resize: none;
+	font-size: 16px;
   }
 
   button.enviaMensagem{
@@ -281,16 +311,16 @@ h3 {
   }
 
   img.enviar{
-	max-width:20px;
-    max-height:20px;
+	max-width:25px;
+    max-height:25px;
     width: auto;
     height: auto;
 	
   }
 
   img.ficheiros{
-	max-width:20px;
-    max-height:20px;
+	max-width:25px;
+    max-height:25px;
     width: auto;
     height: auto;
 	
@@ -322,6 +352,10 @@ p.paragrafo {
     padding: 6px 15px;
     width: max-content;
     border-radius: 36px;
+<<<<<<< HEAD
+=======
+	font-size: 20px;
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 }
 
 #novoGrupo {
@@ -330,7 +364,11 @@ p.paragrafo {
 	bottom: 100px;
 	left: 560px;
 	height: 500px;
+<<<<<<< HEAD
 	width: 400px;
+=======
+	width: 410px;
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 	border-radius: 2em;
   }
 
@@ -358,18 +396,18 @@ form{
 	background-color: white;
 	margin-top: -6%;
 	right: 0px;
-	height: 550px;
-	width: 1010px;
+	height: 570px;
+	width: 936px;
 	
 }
 
 .descricaoGrupo{
 	position: relative;
-	top: -45px;
+	top: -20px;
 	margin-bottom: 0;
 	right: 0.5%;
-	background-color: #516bcc;
-	width: 998px;
+	background-color: #112031;
+	width: 923px;
 	padding: 1%;
 	border-bottom-left-radius: 36px;
 	border-bottom-right-radius: 36px;
@@ -390,14 +428,15 @@ form{
 
 #mensagemConversa{
 	position: absolute;
-	bottom: 3px;
-	width: 880px;
-	height: 50px;
-	left: 65px;
+	bottom: 7px;
+	width: 780px;
+	height: 60px;
+	left: 75px;
 	background-color: rgb(255, 255, 255);
   	outline: none;
 	border-radius: 10px;
 	resize: none;
+	font-size: 19px;
 }
 
 .descricaoGrupo button{
@@ -418,6 +457,29 @@ form{
 	padding: 0;
 	margin: 12px;
 	color: #E6E6E6;
-
-
 }
+
+.participantesGrupo{
+	text-align: left;
+	width:150px;
+	height: 230px;
+	overflow-y: scroll;
+	margin-left: 160px;
+	
+}
+
+button#botaoCriarGrupo{
+	font-size: 20px;
+    background-color: #345B63;
+    width: 80px;
+    height: 40px;
+    border-radius: 2em;
+    color: #D4ECDD;
+    border: #152D35 solid 3px;
+	
+}
+
+h4 {
+	margin: 0;
+}
+

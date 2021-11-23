@@ -127,4 +127,8 @@ dark_mode_toggle.onclick = () => {
 //         sessionStorage.setItem(chave,"Blablabla Eventos")
     
 // }
+<<<<<<< HEAD
 // }
+=======
+// }
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e

@@ -5,7 +5,7 @@
 
 <head>
  
-  <title>Contactos</title>
+  <title>Novo Grupo</title>
   
 </head>
 
@@ -25,12 +25,20 @@
               
               <div class="menuLeft">
                 <ul> 
+<<<<<<< HEAD
                   <li><a href="Projeto.html"><b>Home</b></a></li>
+=======
+                  <li><a href="Projeto.html"><b>Página Inicial</b></a></li>
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
                   <li><a href="Agenda.html"><b>Agenda</b></a></li>
                   <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
                   <li><a href="#"><b>Definições</b></a></li>
                   <li><a href="#"><b>Ajuda</b></a></li>
+<<<<<<< HEAD
                     <li>
+=======
+                  <li class="logoBar">
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
                       <div class="menuRight">
                         <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
         
@@ -56,11 +64,23 @@
         <td class = "listaContactos"> 
           <div class="scroll">
             <h2>Lista de Contactos </h2><hr> 
-            <h3>Grupos</h3> <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-            <a href="">Projeto IC</a> <br> <a href="">Amigos</a> <br> <a href="">Família</a> <br>
+            <h3>Grupos</h3> 
+            <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+            <a href="">Projeto IC</a> <br> 
+            <a href="">Amigos</a> <br> 
+            <a href="">Família</a> <br>
+            <a href="">IC002</a> <br>
             <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
-            <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
-            <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
+            <a href="">Carlos</a> <br>
+            <a href="">David</a> <br>
+            <a href="">Filipe</a> <br> 
+            <a href="">Francisco</a> <br>
+            <a href="">João</a> <br>
+            <a href="">Joana</a> <br>
+            <a href="">Leonor</a> <br>
+            <a href="">Mafalda</a> <br>
+            <a href="">Maria</a> <br> 
+            <a href="">Rui</a> <br>            
           </div>
           
         </td>
@@ -68,25 +88,40 @@
         <td class = "novoGrupo">
             <div id = "novoGrupo">
                 <h1 id = "novoGrupoBar">Criar Grupo</h1><br>
-                <a type="button" class="fechaJanela" href="ListaContactos.html"><img class="fechar" src="Resources/close.png"></a>
+                <a type="button" class="fechaJanela" href="ListaContactos.html"><img class="fechar" src="Resources/back.png"></a>
             
             <form id="frmNovoGrupo">
-                <label for="name">Nome do grupo:</label>
-                <input type="text" id="inputNomeGrupo" name="name"><br><br><br><br>
-                <label for="participante">Participantes:</label><br><br>
+                <b><label for="name">Nome do grupo:</label></b>
+                <input type="text" id="inputNomeGrupo" name="name"><br><br>
+                <b><label for="participante">Participantes:</label></b><br><br>
+
+
+
+              <div class = "participantesGrupo">
                 <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
                 <label for="carlos"> Carlos</label><br><br>
                 <input type="checkbox" classe="participante" name="participante" value="David"> 
                 <label for="david"> David</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Joana">  
-                <label for="joana"> Joana</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Maria">
-                <label for="maria"> Maria</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="João">
-                <label for="joao"> João</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Filipe">  
+                <label for="filipe"> Filipe</label><br><br>
                 <input type="checkbox" classe="participante" name="participante" value="Francisco"> 
                 <label for="francisco"> Francisco</label><br><br>
-                <button type="button" id = "botaoCriarGrupo">Criar</button>
+                <input type="checkbox" classe="participante" name="participante" value="Joana">  
+                <label for="joana"> Joana</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="João">
+                <label for="joao"> João</label><br><br>
+
+                <input type="checkbox" classe="participante" name="participante" value="Leonor">
+                <label for="leonor"> Leonor</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Mafalda">
+                <label for="mafalda"> Mafalda</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Maria">
+                <label for="maria"> Maria</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Rui">
+                <label for="Rui"> Rui</label><br><br>
+              </div>
+              <br><br>
+              <button type="button" id = "botaoCriarGrupo"><h4>Criar</h4></button>
             </form>
             </div>
         </td>

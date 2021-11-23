@@ -5,7 +5,7 @@
 
 <head>
  
-  <title>Contactos</title>
+  <title>Contacto</title>
   
 </head>
 
@@ -28,12 +28,20 @@
               
               <div class="menuLeft">
                 <ul> 
+<<<<<<< HEAD
                   <li><a href="Projeto.html"><b>Home</b></a></li>
+=======
+                  <li><a href="Projeto.html"><b>Página Inicial</b></a></li>
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
                   <li><a href="Agenda.html"><b>Agenda</b></a></li>
                   <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
                   <li><a href="#"><b>Definições</b></a></li>
                   <li><a href="#"><b>Ajuda</b></a></li>
+<<<<<<< HEAD
                     <li>
+=======
+                  <li class="logoBar">
+>>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
                       <div class="menuRight">
                         <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
         
@@ -60,13 +68,25 @@
           <div class="scroll">
             <h2>Lista de Contactos </h2><hr> 
             <div id="grupos">
-              <h3>Grupos</h3> <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-              <a href="">Projeto IC</a> <br> <a href="">Amigos</a> <br> <a href="">Família</a> <br>
+              <h3>Grupos</h3> 
+              <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+              <a href="">Projeto IC</a> <br> 
+              <a href="">Amigos</a> <br> 
+              <a href="">Família</a> <br>
+              <a href="">IC002</a> <br>
             </div>
             <div id="contactos">
               <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
-              <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
-              <a href="">Carlos</a> <br> <a href="">David</a> <br> <a href="">Joana</a> <br><a href="">Maria</a> <br> <a href="">Francisco</a> <br> 
+              <a href="">Carlos</a> <br>
+              <a href="">David</a> <br>
+              <a href="">Filipe</a> <br> 
+              <a href="">Francisco</a> <br>
+              <a href="">João</a> <br>
+              <a href="">Joana</a> <br>
+              <a href="">Leonor</a> <br>
+              <a href="">Mafalda</a> <br>
+              <a href="">Maria</a> <br> 
+              <a href="">Rui</a> <br>  
             </div>
            
           </div>
@@ -84,8 +104,8 @@
   
               </div>
               <textarea placeholder="Escreva uma mensagem..." id="mensagemConversa" required></textarea>
-              <button type="submit" class="enviaMensagem" onclick="imprimeMensagemConversa()" style="height: 50px; width: 50px;"><img class="enviar" src="Resources/enviar.png"></button>
-              <button type="button" class="enviaFicheiros" style="height: 50px; width: 50px;"><img class="ficheiros" src="Resources/anexo.png"></button>
+              <button type="submit" class="enviaMensagem" onclick="imprimeMensagem('mensagemConversa', 'caixaConversa')" style="height: 50px; width: 50px;"><img class="enviar" src="Resources/enviar.png"></button>
+              <button type="button" class="enviaFicheiros" onclick= "enviaFicheiro('mensagemConversa', 'caixaConversa','anexo1.pdf')" style="height: 50px; width: 50px;"><img class="ficheiros" src="Resources/anexo.png"></button>
             </div>
 
 
