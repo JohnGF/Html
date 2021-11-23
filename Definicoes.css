@@ -4,13 +4,10 @@ body,html{
 	width: 1240px;
 	background-color: #D4ECDD;
 	margin: 0;
-<<<<<<< HEAD
-=======
 }
 
 li.logoBar{
 	float: right;
->>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 }
 
 videoContainer{
@@ -152,15 +149,11 @@ a.novo{
 .chamada{
 	text-align: center;
 	background-color: #b1b3b3;
-<<<<<<< HEAD
-	width: 938px;
-=======
 	background-image: url("./Resources/vc.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size:contain;
 	width: 930px;
->>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 	padding: 0;
 }
 
@@ -202,12 +195,8 @@ h3 {
 	background-color: #345B63;
 	position: absolute;
 	bottom: 0;
-<<<<<<< HEAD
-	width: 938px;
-=======
 	width: 935px;
 	height: 60px;
->>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
   }
   
 .functions a {
@@ -352,10 +341,7 @@ p.paragrafo {
     padding: 6px 15px;
     width: max-content;
     border-radius: 36px;
-<<<<<<< HEAD
-=======
 	font-size: 20px;
->>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 }
 
 #novoGrupo {
@@ -364,11 +350,7 @@ p.paragrafo {
 	bottom: 100px;
 	left: 560px;
 	height: 500px;
-<<<<<<< HEAD
-	width: 400px;
-=======
 	width: 410px;
->>>>>>> 5a9c8e2c9906f895530142e8de82515e1c07ca5e
 	border-radius: 2em;
   }
 
