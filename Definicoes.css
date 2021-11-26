@@ -40,10 +40,14 @@ header a {
 li {
 	float: left;
 	padding-right: 50px;
+	
 
   }
   
 li a {
+	border-color: #345B63;
+	
+	border:1px solid;
 	display: inline-block;
 	align-items: space-between;
 	color: #D4ECDD;
@@ -53,7 +57,8 @@ li a {
   }
   
 li a:hover {
-	border: white groove;
+	/* border: white groove; */
+	
 	border-radius: 30px;
   }
 

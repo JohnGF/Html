@@ -150,3 +150,18 @@ function compartilhaTela() {
     document.getElementsByTagName("BODY")[0].style.border = "thick solid red";
 }
 
+function loadcontacto(){
+   const a=document.querySelector(".logo");
+   var newnode=document.createElement("td");
+   newnode.className="chamada"
+   newnode.id="replaced";
+   newnode.innerHTML='<div class="functions">'+' <a href=""><img class="function" src="Resources/Mute.png"></a>'+'<a href=""><img class="function" src="Resources/audio_mute.png"></a>'
+   +'<a href=""><img class="function" src="Resources/cam.png"></a>'+'<a href="Chat.html" onclick="abreChat()"><img class="function" src="Resources/chat.png"></a>'+
+   '<a href="Chat.html" onclick="abreChat()"><img class="function" src="Resources/chat.png"></a>'+
+   '<a onclick="compartilhaTela()"><img class="function" src="Resources/sharescreen.png"></a>'+
+   '<a href="IniciarReuniao.html" id = "leaveButton"><img class="function" src="Resources/leave.png"></a>'+
+   '</div>';
+
+   a.replaceWith(newnode);
+    console.log("funcionei");
+}
