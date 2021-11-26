@@ -8,12 +8,13 @@
     <title>
         Calendar
     </title>
-    <link rel="stylesheet" href="Calendario.css">
+    <link rel="stylesheet" href="Styles/Calendario.css">
 </head>
 
 <body class="light">
+    
     <div class="Event_box">
-        <div id=dia_selecionado>Dia atual</div>
+        <div id= "dia_selecionado" >Dia atual</div>
         <textarea name="text" id="eventos_dia" cols="30" rows="10"></textarea>
         <button class="salvar">Salvar</button>
     </div>
@@ -22,11 +23,11 @@
             <span class="month-picker" id="month-picker">February</span>
             <div class="year-picker">
                 <span class="year-change" id="prev-year">
-                    <pre></pre>
+                    <pre>&lt;</pre>
                 </span>
                 <span id="year">2021</span>
                 <span class="year-change" id="next-year">
-                    <pre>></pre>
+                    <pre>&gt;</pre>
                 </span>
             </div>
         </div>
@@ -53,5 +54,6 @@
         <div class="month-list"></div>
     </div>
 
-    <script src="Agenda.js"></script>
+    <script src="Scripts/Agenda.js"></script>
 </body>
+</html>

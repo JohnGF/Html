@@ -13,8 +13,11 @@
 
 
   <header>
-      <link rel="stylesheet" href="Definicoes.css"> 
-      <script src="script.js"></script>   
+      <link rel="stylesheet" href="Styles/style.css"> 
+      <script src="Scripts/script.js"></script>  
+      <script src="Scripts/Conversa.js"></script> 
+      <script src="Scripts/Reuniao.js"></script>  
+
       <!-- Top header menu containing
           logo and Navigation bar -->
       <div id="top-header">               
@@ -24,10 +27,10 @@
               
               <div class="menuLeft">
                 <ul> 
-                  <li><a href="Projeto.html"><b>Página Inicial</b></a></li>
+                  <li><a href="index.html"><b>Página Inicial</b></a></li>
                   <li><a href="Agenda.html"><b>Agenda</b></a></li>
                   <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
-                  <li><a href="#"><b>Definições</b></a></li>
+                  <li><a href="Definicoes.html"><b>Definições</b></a></li>
                   <li><a href="#"><b>Ajuda</b></a></li>
                   <li class="logoBar">
                       <div class="menuRight">
@@ -52,36 +55,24 @@
   <table>
       <tbody>
       <tr> <br>
-      <td class = "listaContactos"> 
-        <div class="scroll">
-          <h2>Lista de Contactos </h2><hr> 
-          <h3>Grupos</h3> 
-          <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-          <div onclick="loadcontacto()">Projeto IC</div> <br> 
-          <a href="">Amigos</a> <br> 
-          <a href="">Família</a> <br>
-          <a href="Contacto.html">IC002</a> <br>
-          <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
-            <a href="">Carlos</a> <br>
-            <a href="">David</a> <br>
-            <a href="">Filipe</a> <br> 
-            <a href="">Francisco</a> <br>
-            <a href="">João</a> <br>
-            <a href="">Joana</a> <br>
-            <a href="">Leonor</a> <br>
-            <a href="">Mafalda</a> <br>
-            <a href="">Maria</a> <br> 
-            <a href="">Rui</a> <br>  
-        </div>
-        
-      </td>
+        <td class = "listaContactos"> 
+          <div class="scroll">
+            <h2>Lista de Contactos </h2><hr> 
+            <h3>Grupos</h3> 
+            <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+            <div id="grupos"></div>
+            <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
+            <div id="contactos"></div>
+            
+          </div>
+          
+        </td>
 
-      <td class="logo"><img src="Resources\Logo.png" height="500"/></td>
+      <td class="logo tdConversa"><img src="Resources\Logo.png" height="500"/></td>
+      <div id="detalhes" hidden></div>
       </tr>
       </tbody>
     </table>
-
-
 
 
 
