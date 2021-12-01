@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calendar
+    </title>
+    <link rel="stylesheet" href="Styles/Calendario.css">
+</head>
+<!--  -->
+<div id="top-header">               
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="container">
+        
+        <div class="menuLeft">
+          <ul> 
+              <li><a href="index.html"><b>Página Inicial</b></a></li>
+              <li><a href="Agenda.html"><b>Agenda</b></a></li>
+              <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+              <li><a href="Definicoes.html"><b>Definições</b></a></li>
+              <li><a href="#"><b>Ajuda</b></a></li>
+              <li class="logoBar">
+                <div class="menuRight">
+                  <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
+  
+                </div>
+              </li>
+              <li></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>   
+<!--  -->
+<body class="light">
+    
+    <div class="Event_box">
+        <div id= "dia_selecionado" >Dia atual</div>
+        <div id="tempo">Horas: 
+            <select id="horas" >  
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                
+            </select>
+            <select id="min">
+                <option value="0">0</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+            </select>
+        </div>
+        
+        
+        <textarea name="text" id="eventos_dia" cols="30" rows="10"></textarea>
+        <button class="salvar">Salvar</button>
+    </div>
+    <div class="calendar">
+        <div class="calendar-header">
+            <span class="month-picker" id="month-picker">February</span>
+            <div class="year-picker">
+                <span class="year-change" id="prev-year">
+                    <pre>&lt;</pre>
+                </span>
+                <span id="year">2021</span>
+                <span class="year-change" id="next-year">
+                    <pre>&gt;</pre>
+                </span>
+            </div>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-week-day">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sab</div>
+            </div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-footer">
+            <div class="toggle">
+                <span>Dark Mode</span>
+                <div class="dark-mode-switch">
+                    <div class="dark-mode-switch-ident"></div>
+                </div>
+            </div>
+        </div>
+        <div class="month-list"></div>
+    </div>
+
+    <script src="Scripts/Agenda.js"></script>
+</body>
+</html>

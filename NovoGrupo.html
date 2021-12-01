@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang = "pt">
+<!-- Header Menu of the Page -->
+
+<head>
+ 
+  <title>Novo Grupo</title>
+  
+</head>
+
+<body>
+
+
+  <header>
+      <link rel="stylesheet" href="Styles/style.css"> 
+      <script src="Scripts/script.js"></script>   
+      <script src="Scripts/Conversa.js"></script> 
+   
+      <!-- Top header menu containing
+          logo and Navigation bar -->
+      <div id="top-header">               
+          <!-- Navigation Menu -->
+          <nav>
+            <div class="container">
+              
+              <div class="menuLeft">
+                <ul> 
+                  <li><a href="index.html"><b>Página Inicial</b></a></li>
+                  <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                  <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                  <li><a href="Definicoes.html"><b>Definições</b></a></li>
+                  <li><a href="#"><b>Ajuda</b></a></li>
+                  <li class="logoBar">
+                      <div class="menuRight">
+                        <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
+        
+                      </div>
+                    </li>
+                    <li></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      </div>   
+      <!-- Image menu in Header to contain an Image and
+          a sample text over that image -->
+      <div id="header-image-menu">
+  
+      </div>
+
+  </header>
+
+    <table>
+      <tbody>
+        <tr> <br>
+          <td class = "listaContactos"> 
+            <div class="scroll">
+              <h2>Lista de Contactos </h2><hr> 
+              <h3>Grupos</h3> 
+              <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+              <div id="grupos" onclick = "location.href = 'ListaContactos.html'"></div>
+              <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
+              <div id="contactos" onclick = "location.href = 'ListaContactos.html'"></div>
+              
+            </div>
+            
+          </td>
+
+        <td class = "novoGrupo tdConversa">
+            <div id = "novoGrupo">
+                <h1 id = "novoGrupoBar">Criar Grupo</h1><br>
+                <a type="button" class="fechaJanela" href="ListaContactos.html"><img class="fechar" src="Resources/back.png"></a>
+            
+            <form id="frmNovoGrupo">
+                <b><label for="name">Nome do grupo:</label></b>
+                <input type="text" id="inputNomeGrupo" name="name"><br><br>
+                <b><label for="participante">Participantes:</label></b><br><br>
+
+              <div class = "participantesGrupo">
+                <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
+                <label for="carlos"> Carlos</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="David"> 
+                <label for="david"> David</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Filipe">  
+                <label for="filipe"> Filipe</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Francisco"> 
+                <label for="francisco"> Francisco</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Joana">  
+                <label for="joana"> Joana</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="João">
+                <label for="joao"> João</label><br><br>
+
+                <input type="checkbox" classe="participante" name="participante" value="Leonor">
+                <label for="leonor"> Leonor</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Mafalda">
+                <label for="mafalda"> Mafalda</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Maria">
+                <label for="maria"> Maria</label><br><br>
+                <input type="checkbox" classe="participante" name="participante" value="Rui">
+                <label for="Rui"> Rui</label><br><br>
+              </div>
+              <br><br>
+              <button type="button" id = "botaoCriarGrupo"><h4>Criar</h4></button>
+            </form>
+            <p id="alerta"></p>
+            </div>
+        </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
