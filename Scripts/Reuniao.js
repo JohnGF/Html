@@ -97,7 +97,7 @@ function mudarMic(nome){
 }
 
 function mudarAudio(nome){    
-    if (audio == "Resources/Audio_mute.png") {
+    if (audio == "Resources/audio_mute.png") {
         audio = "Resources/audio.png"
 
     } else {
