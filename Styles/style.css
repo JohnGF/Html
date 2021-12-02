@@ -5,6 +5,14 @@ body,html{
 	background-color: #D4ECDD;
 	margin: 0;
 	font-family: sans-serif;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 li.logoBar{
@@ -62,10 +70,22 @@ li a:hover, li a:checked{
 
 
 .fitLogo{
-	width: 55px;
+	max-width: 55px;
 	position: relative;
 	left: 95%;
 	display: inline-block;
+}
+
+img.fitLogo {
+	max-width: 40px;
+    max-height: 40px;
+	margin: 5px;
+}
+
+#logoConversa{
+	max-height: 300px;
+	max-width: 300px;
+	margin-left: 340px;
 }
 
 footer {
@@ -76,20 +96,26 @@ footer {
 	align-content: center;
 }
 
-.logoInicial{
-	margin: auto;
+.logoInicial {
 	text-align: center;
-	bottom: 80%;
-
 }
 
+.logoInicial img{
+	max-width: 300px;
+    max-height: 300px;
+    margin: 100px;
+}
 
 footer a {
 	color: #D4ECDD;
-	background-color:#345B63;
-	border-radius: 25px;
-	width: 214px;
-    height: 30px;
+    background-color: #345B63;
+    border-radius: 25px;
+    width: 300px;
+    height: 60px;
+}
+
+footer li{
+	padding: 0;
 }
 
 footer ul {
@@ -180,6 +206,7 @@ h3 {
 	padding-top: 11px;
 	padding-bottom: 11px;
 	width: 300px;
+	cursor: default;
 }
 
 /* ****************************************************TROQUEI**************************************************** */
@@ -212,7 +239,8 @@ h3 {
 	position: absolute;
 	bottom: 0;
 	width: 966px;
-	height: 60px;
+	height: 80px;
+	border-bottom-left-radius: 15px;
   }
   
 .functions a {
@@ -227,13 +255,13 @@ h3 {
 	margin-right: 10px;
 	text-decoration: none;
 	font-size: 20px;
-	padding-top: 2px;
+	padding: 1%;
   }
 
 .functions a:hover {
 	background-color: #659ba7;
 	color: black;
-	border-radius: 5px;
+	border-radius: 35px;
 }
 
 img.function{
@@ -271,6 +299,7 @@ div .disable {
 	margin: 0;
 	border-top-left-radius: 1em;
     border-top-right-radius: 1em;
+	cursor: default;
 
 }
 
@@ -287,7 +316,7 @@ textarea {
 	font-size: 16px;
 }
 
-button.enviaMensagem{
+button#enviaMensagem{
 	border-radius: 25px;
 	position: absolute;
 	bottom: 10px; 
@@ -383,6 +412,7 @@ p.paragrafo {
 	color:#9baca2;
 	border-top-left-radius:  1em;
 	border-top-right-radius:  1em;
+	cursor: default;
 }
 
 
@@ -392,23 +422,21 @@ form{
 }
 
 
-#conversa{
-	position: relative;
-	background-color: white;
-	margin-top: -6%;
-	right: 0px;
-	height: 570px;
-	width: 976px;
-	
+#conversa {
+    position: relative;
+    background-color: white;
+    margin-top: -5%;
+    right: 0px;
+    height: 575px;
+    width: 980px;
 }
 
 .descricaoGrupo{
 	position: relative;
 	top: -20px;
 	margin-bottom: 0;
-	right: 0.5%;
 	background-color: #112031;
-	width: 962px;
+	width: 980px;
 	padding: 1%;
 	border-bottom-left-radius: 36px;
 	border-bottom-right-radius: 36px;
@@ -416,16 +444,16 @@ form{
 
 }
 
-#caixaConversa{
-	width: 96%;
-	height: 460px;
-	background-color: rgb(244, 248, 246);
-	margin-top: 40px;
-	margin-left: 25px;
-	text-align: right;
-  	flex-direction: column-reverse;
+#caixaConversa {
+    position: absolute;
+    width: 96%;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: 21px;
+    text-align: right;
+    flex-direction: column-reverse;
     vertical-align: bottom;
-	display: flex;
+    display: flex;
 }
 
 #mensagemConversa{
@@ -459,6 +487,7 @@ form{
 	padding: 0;
 	margin: 12px;
 	color: #E6E6E6;
+	cursor: default;
 }
 
 .participantesGrupo{
@@ -490,6 +519,7 @@ div.tituloDefinicoes{
     text-align: center;
     margin-top: 35px;
 	color: #152D35;
+	cursor: default;
 }
 
 div.fotoUtilizador{
@@ -506,15 +536,21 @@ img.fotoAtualUtilizador{
 
 #perfis{
 	margin-top: -40px;
-	width: 900px;
+	width: 700px;
+	margin-left: 70px;
 	
 }
-
+#perfis img{
+	padding: 2%;
+	border-radius: 19px;
+	background-color: #112031;
+	margin: 5px;
+}
 #perfis div{
 	text-align: right;
-	position: relative;
-	right: -50px;
-	bottom: 1px;
+	position: absolute;
+	right: 5px;
+	bottom: 77px;
 }
 
 #alerta{
@@ -528,18 +564,75 @@ img.fotoAtualUtilizador{
 #more{
 	position: absolute;
 	top: 22px;
-	right: 5px;
+	right: 15px;
+	cursor: pointer;
 }
 
 #videocall{
 	position: absolute;
 	top: 22px;
-	right: 70px;
+	right: 100px;
+	cursor: pointer;
 }
 
 #nomeChamada{
 	background-color: #345B63;
 	color: #D4ECDD;
-	font-size: x-large;
+	font-size: xx-large;
+	width: max-content;
+	margin-left: 80px;
+	margin-top: 10px;
+	cursor: pointer;
+	height: 50px;
 }
+
+#divParticipantes{
+	position: absolute;
+	border-radius: 15px;
+	top: 150px;
+	right: 10px;
+	background-color: #345B63;
+	opacity: 0.9;
+	z-index: 3;
+	padding: 1%;
+	border: groove #173252;
+	color: #D4ECDD;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
 	
+  }
+  
+::-webkit-scrollbar-track {
+	background-color: #152D35;
+	border-radius: 20px;
+  }
+  
+::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	border: 2px solid transparent;
+	background-clip: content-box;
+	background-color: #D4ECDD;
+  }
+
+.elemento img {
+	margin: 10px;
+}
+
+.elemento {
+	height: 50px;
+}
+.elemento p {
+    display: inline-block;
+    top: -21px;
+    position: relative;
+}
+
+p.nomeContacto{
+	display: inline-block;
+    top: -18px;
+    margin-left: 15px;
+    position: relative;
+}
