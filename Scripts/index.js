@@ -8,7 +8,7 @@ function principal(){
         localStorage.setItem('wasVisited', false);
         localStorage.setItem('imagem', "EuMascA.png");
         adicionaGrupos();
-        contactos = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
+        contactos = ["Carlos", "David", "Filipe", "Francisco", "João", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
         gravaHistorico()
         
     }else{
@@ -19,7 +19,7 @@ function principal(){
 function adicionaGrupos(){
     grupos["Projeto IC"] = ["Carlos", "Francisco", "Leonor", "Mafalda"]
     grupos["Amigos"] = ["David", "Filipe", "Mafalda", "Maria"]
-    grupos["Família"] = ["Joao", "Joana", "Rui"]
+    grupos["Família"] = ["João", "Joana", "Rui"]
     grupos["IC002"] = ["Carlos", "David", "Leonor"]
 }
 

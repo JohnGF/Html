@@ -20,6 +20,8 @@ let grupos = {};
 
 let contactos;
 
+let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
+
 let imagemEscolhida = localStorage.getItem('imagem')
 
 let cam = "Resources/noCam.png";
@@ -131,7 +133,7 @@ function adicionaGrupos(funcionalidade){
         elemento.setAttribute("id",nome)
         elemento.setAttribute('class',"elemento");
         elemento.setAttribute('onclick',funcao);
-        elemento.innerHTML += '<img src="Resources/Avatars/user.png" height="40"/>  ' + nome + '<br><br>'
+        elemento.innerHTML += '<img src="Resources/Avatars/user.png" height="40"/>  <p>' + nome + '</p>'
         div.appendChild(elemento);
     }
 } 
@@ -144,7 +146,11 @@ function adicionaContactos(funcionalidade){
         var funcao = 'abre'+funcionalidade+'("'+contactos[nome]+'")'
         elemento.setAttribute('class',"elemento");
         elemento.setAttribute('onclick',funcao);
-        elemento.innerHTML += '<img src="Resources/Avatars/'+contactos[nome]+'A.png" height="40"/>  ' + contactos[nome] + '<br><br>'
+        if(contactosInicial.includes(contactos[nome])){
+            elemento.innerHTML += '<img src="Resources/Avatars/'+contactos[nome]+'A.png" height="40"/>  <p>' + contactos[nome] + '</p>'
+        } else{
+            elemento.innerHTML += '<img src="Resources/Avatars/user.png" height="40"/>  <p>' + contactos[nome] + '</p>'
+        }
         div.appendChild(elemento);
 
     }
