@@ -1,0 +1,638 @@
+
+body,html{
+    height: 720px;
+	width: 1280px;
+	background-color: #D4ECDD;
+	margin: 0;
+	font-family: sans-serif;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li.logoBar{
+	float: right;
+}
+
+videoContainer{
+    margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+video{
+    width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+.container{
+	background-color: #345B63;
+	margin: 0;
+}
+ul { 
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+header a {
+	font-size: x-large;
+
+}
+
+li {
+	float: left;
+	padding-right: 50px;
+
+}
+  
+li a {
+	display: inline-block;
+	align-items: space-between;
+	color: #D4ECDD;
+	text-align: center;
+	padding: 14px 28px;
+	text-decoration: none;
+	border-radius: 15px;
+}
+ 
+
+li a:hover, li a:checked{
+	background-color: #659ba7;
+	color: black;
+}
+
+
+.fitLogo{
+	max-width: 55px;
+	position: relative;
+	left: 95%;
+	display: inline-block;
+}
+
+img.fitLogo {
+	max-width: 40px;
+    max-height: 40px;
+	margin: 5px;
+}
+
+#logoConversa{
+	max-height: 300px;
+	max-width: 300px;
+	margin-left: 340px;
+}
+
+footer {
+	width: 1280px;
+	bottom:0%;
+	position:relative;
+	text-align: center;
+	align-content: center;
+}
+
+.logoInicial {
+	text-align: center;
+}
+
+.logoInicial img{
+	max-width: 300px;
+    max-height: 300px;
+    margin: 100px;
+}
+
+footer a {
+	color: #D4ECDD;
+    background-color: #345B63;
+    border-radius: 25px;
+    width: 300px;
+    height: 60px;
+}
+
+footer li{
+	padding: 0;
+}
+
+footer ul {
+	display: inline-block;
+	
+}
+
+table{
+	width: 1280px;
+	height: 500px;
+	border-spacing: 0;
+	margin-top: 10px;
+}
+
+div, header, table{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+td .scroll {
+    height: 100%;
+    margin-top: 10px;
+	margin-left: 10px;
+    padding: 0;
+    overflow: auto;
+}
+
+td .listaContactos {
+	width: 200px;
+    height: 100%;
+	margin-left: 10px;
+    padding: 0;
+    overflow: auto;
+}
+
+
+td{
+	height:615px;
+}
+
+a.novo{
+	background-color: #3d6a74;
+	border-color: #112031;
+	margin-right: 5px;
+}
+
+.novo, h3{
+	display: inline-block;
+	
+}
+
+.novo{
+	border-color: aliceblue;
+	border-radius: 36px;
+	border-style: groove;
+	padding: 2%;
+}
+
+.chamada{
+	text-align: center;
+	/* ƒbackground-color: #b1b3b3; */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:contain;
+	width: 930px;
+	padding: 0;
+}
+
+td.logo{
+	text-align: center;
+}
+
+h2{
+	color: #9baca2;
+	margin: 0;
+}
+
+h3 {
+	color: #D4ECDD;
+	font-size: x-large;
+}
+
+.listaContactos{
+	background-color: #152D35;
+	border-radius: 15px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	width: 300px;
+	cursor: default;
+}
+
+/* ****************************************************TROQUEI**************************************************** */
+.listaContactos a{
+	text-decoration: none;
+	color: #eeeeee;
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 23px;
+	margin-right: 0;
+	font-size: large;
+}
+/* **************************************************************************************************************** */
+
+
+.elemento{
+	cursor: pointer;
+	text-decoration: none;
+	color: #EEEEEE;
+	margin-top: 2px;
+	margin-bottom: 20px;
+	margin-left: 23px;
+	margin-right: 0;
+	font-size: large;
+}
+
+.functions {
+	background-color: #345B63;
+	position: absolute;
+	bottom: 0;
+	width: 966px;
+	height: 80px;
+	border-bottom-left-radius: 15px;
+  }
+  
+.functions a {
+	float: left;
+	display: block;
+	color: #eeeeee;
+	text-align: center;
+	width: 55px;
+	height: 55px;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-right: 10px;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 1%;
+  }
+
+.functions a:hover {
+	background-color: #659ba7;
+	color: black;
+	border-radius: 35px;
+}
+
+img.function{
+	max-width: 50px;
+	max-height: 50px;
+}
+
+#leaveButton{
+	float: right;
+}
+
+div .disable {
+	color: currentColor;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+#chat {
+    position: absolute;
+    background-color: white;
+    bottom: 180px;
+    left: 545px;
+    height: 350px;
+    width: 500px;
+	border-radius: 2em;
+}
+
+#chatBar{
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	display: block;
+	background-color: #152D35;
+	color: #9baca2;
+	margin: 0;
+	border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+	cursor: default;
+
+}
+
+textarea {
+	position: absolute;
+	bottom: 10px;
+    width: 365px;
+    height: 30px;
+    left: 65px;
+	background-color: rgb(255, 255, 255);
+  	outline: none;
+	border-radius: 10px;
+	resize: none;
+	font-size: 16px;
+}
+
+button#enviaMensagem{
+	border-radius: 25px;
+	position: absolute;
+	bottom: 10px; 
+	right: 10px;
+	width: 40px;
+	height: 35px;
+    cursor: pointer;
+    background-color: #63bbb5;
+}
+
+button.enviaFicheiros{
+	border-radius: 25px;
+	position: absolute;
+	bottom: 10px; 
+	left: 10px;
+	width: 40px;
+	height: 35px;
+    cursor: pointer;
+    background-color: #63bbb5;
+}
+
+a.fechaJanela{
+	border-radius: 10px;
+	position: absolute;
+	top: 9px;
+	right: 25px;
+	cursor: pointer;
+}
+
+img.enviar{
+	max-width:25px;
+    max-height:25px;
+    width: auto;
+    height: auto;
+	
+}
+
+img.ficheiros{
+	max-width:25px;
+    max-height:25px;
+    width: auto;
+    height: auto;
+	
+}
+
+img.fechar{
+	max-width:25px;
+    max-height:25px;
+    width: auto;
+    height: auto;
+	
+}
+
+div#chatBox {
+    width: 450px;
+    height: 215px;
+    background-color: rgb(255 255 255);
+    margin-left: 25px;
+    text-align: right;
+    flex-direction: column-reverse;
+    vertical-align: bottom;
+    display: flex;
+	overflow: scroll;
+}
+
+p.paragrafo {
+    align-self: flex-end;
+    background-color: #D4ECDD;
+    margin: 5px;
+    padding: 6px 15px;
+    width: max-content;
+    border-radius: 36px;
+	font-size: 20px;
+}
+
+#novoGrupo {
+	position: absolute;
+	background-color: white;
+	bottom: 100px;
+	left: 560px;
+	height: 500px;
+	width: 410px;
+	border-radius: 2em;
+}
+
+#novoGrupoBar{
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+	display: block;
+	background-color: #152D35;
+	margin: 0;
+	color:#9baca2;
+	border-top-left-radius:  1em;
+	border-top-right-radius:  1em;
+	cursor: default;
+}
+
+
+form{
+	text-align: center;
+	margin-top: 8%;
+}
+
+
+#conversa {
+    position: relative;
+    background-color: white;
+    margin-top: -5%;
+    right: 0px;
+    height: 575px;
+    width: 980px;
+}
+
+.descricaoGrupo{
+	position: relative;
+	top: -20px;
+	margin-bottom: 0;
+	background-color: #112031;
+	width: 980px;
+	padding: 1%;
+	border-bottom-left-radius: 36px;
+	border-bottom-right-radius: 36px;
+	z-index: 1;
+
+}
+
+#caixaConversa {
+    position: absolute;
+    width: 96%;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: 21px;
+    text-align: right;
+    flex-direction: column-reverse;
+    vertical-align: bottom;
+    display: flex;
+}
+
+#mensagemConversa{
+	position: absolute;
+	bottom: 7px;
+	width: 820px;
+	height: 60px;
+	left: 75px;
+	background-color: rgb(255, 255, 255);
+  	outline: none;
+	border-radius: 10px;
+	resize: none;
+	font-size: 19px;
+}
+
+.descricaoGrupo button{
+	height: 50px;
+}
+
+
+#participantes{
+	font-size: larger;
+	padding: 0;
+	margin: 11px;
+    color: #bbb9b9;
+
+}
+
+#nomeGrupo{
+	font-size: xx-large;
+	padding: 0;
+	margin: 12px;
+	color: #E6E6E6;
+	cursor: default;
+}
+
+.participantesGrupo{
+	text-align: left;
+	width:150px;
+	height: 230px;
+	overflow-y: scroll;
+	margin-left: 160px;
+	
+}
+
+button#botaoCriarGrupo{
+	font-size: 20px;
+    background-color: #345B63;
+    width: 80px;
+    height: 40px;
+    border-radius: 2em;
+    color: #D4ECDD;
+    border: #152D35 solid 3px;
+	
+}
+
+h4 {
+	margin: 0;
+}
+
+div.tituloDefinicoes{
+	font-size: 60px;
+    text-align: center;
+    margin-top: 35px;
+	color: #152D35;
+	cursor: default;
+}
+
+div.fotoUtilizador{
+	width: 300px;
+	height: 300px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+img.fotoAtualUtilizador{
+	max-width: 250px;
+	max-height: 250px;
+}
+
+#perfis{
+	margin-top: -40px;
+	width: 700px;
+	margin-left: 70px;
+	
+}
+#perfis img{
+	padding: 2%;
+	border-radius: 19px;
+	background-color: #112031;
+	margin: 5px;
+}
+#perfis div{
+	text-align: right;
+	position: absolute;
+	right: 5px;
+	bottom: 77px;
+}
+
+#alerta{
+	color: rgb(185, 0, 0);
+	font-size: larger;
+	text-align: center;
+	margin-top: 0;
+	font-weight: bold;
+}
+
+#more{
+	position: absolute;
+	top: 22px;
+	right: 15px;
+	cursor: pointer;
+}
+
+#videocall{
+	position: absolute;
+	top: 22px;
+	right: 100px;
+	cursor: pointer;
+}
+
+#nomeChamada{
+	background-color: #345B63;
+	color: #D4ECDD;
+	font-size: xx-large;
+	width: max-content;
+	margin-left: 80px;
+	margin-top: 10px;
+	cursor: pointer;
+	height: 50px;
+}
+
+#divParticipantes{
+	position: absolute;
+	border-radius: 15px;
+	top: 150px;
+	right: 10px;
+	background-color: #345B63;
+	opacity: 0.9;
+	z-index: 3;
+	padding: 1%;
+	border: groove #173252;
+	color: #D4ECDD;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	
+  }
+  
+::-webkit-scrollbar-track {
+	background-color: #152D35;
+	border-radius: 20px;
+  }
+  
+::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	border: 2px solid transparent;
+	background-clip: content-box;
+	background-color: #D4ECDD;
+  }
+
+.elemento img {
+	margin: 10px;
+}
+
+.elemento {
+	height: 50px;
+}
+.elemento p {
+    display: inline-block;
+    top: -21px;
+    position: relative;
+}
+
+p.nomeContacto{
+	display: inline-block;
+    top: -18px;
+    margin-left: 15px;
+    position: relative;
+}
