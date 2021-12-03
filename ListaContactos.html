@@ -69,13 +69,47 @@
           
         </td>
 
-      <td class="tdConversa"><img id = "logoConversa" src="Resources\Logo.png" height="500"/></td>
+      <td class="logo tdConversa"><img class = "logoContactos" src="Resources\Logo.png" height="500"/></td>
       <div id="detalhes" hidden></div>
+      <div id = "chat" hidden>
+        <h1 id = "chatBar">Chat</h1><br>
+        <a type="button" class="fechaJanela" onclick="abreChat()"><img class="fechar" src="Resources/back.png"></a>
+        <div id = "chatBox" class="scroll"></div>
+        <textarea placeholder="Escreva uma mensagem..." onkeyup="verificaChat()" id="mensagem" required></textarea>
+        <button type="submit" id ="enviarMensagem" class="enviaMensagem" disabled onclick="imprimeMensagem('mensagem', 'chatBox','enviarMensagem')"><img class="enviar" src="Resources/enviar.png"></button>
+        <button type="button" class="enviaFicheiros" onclick="toggleEscolha('mensagem', 'chatBox')"><img class="ficheiros" src="Resources/anexo.png"></button>
+      </div>
+
+      <div id="escolhaFicheiro" hidden>
+
+        <div id = "novoGrupo">
+          <h1 id = "novoGrupoBar">Escolha um ficheiro:</h1>
+          <a type="button" class="fechaJanela" onclick="toggleEscolha()"><img class="fechar" src="Resources/back.png"></a>
+      
+          <form id="frmNovoGrupo">
+            <label for="anexo1"> <img src="Resources/pdf.png" alt="Ficheiro PDF Anexo1"> anexo1</label>
+            <label for="trabalhoFinal"><img src="Resources/pdf.png" alt="Ficheiro PDF trabalhoFinal"> trabalhoFinal</label>
+
+            <input type="radio" classe="ficheiro" name="ficheiro" value="anexo1">
+            <input type="radio" classe="ficheiro" name="ficheiro" value="trabalhoFinal">
+
+            <br><br>
+            <label for="projetoIC"> <img src="Resources/pdf.png" alt="Ficheiro PDF projetoIC"> projetoIC</label>
+            <label for="teseFinal"> <img src="Resources/pdf.png" alt="Ficheiro PDF teseFinal"> teseFinal</label>
+
+            
+            <input type="radio" classe="ficheiro" name="ficheiro" value="projetoIC">
+            <input type="radio" classe="ficheiro" name="ficheiro" value="teseFinal">
+
+            <br><br>
+            <button type="button" id = "enviarFicheiro" onclick="enviaFicheiro()"><h4>Enviar</h4></button>
+          </form>
+          <br>
+        </div>
+      </div>
       </tr>
       </tbody>
     </table>
-
-
 
 </body>
 

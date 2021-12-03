@@ -6,10 +6,19 @@ let contactos = [];
 function principal(){
     if (localStorage.getItem('wasVisited' )== undefined){
         localStorage.setItem('wasVisited', false);
-        localStorage.setItem('imagem', "EuMascA.png");
+        localStorage.setItem('imagemEscolhida', "EuMascA.png");
+        localStorage.setItem('imagem', "EuMascImg.jpeg");
+        localStorage.setItem('avatar', "EuMascA.png");
         adicionaGrupos();
-        contactos = ["Carlos", "David", "Filipe", "Francisco", "João", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
-        gravaHistorico()
+        contactos = ["Carlos", "David", "Filipe", "Francisco", "João", "Joana", "Leonor", "Mafalda", "Maria", "Rui"];
+        localStorage.setItem("historicoProjetoIC" , "");
+        localStorage.setItem("historicoAmigos" , "");
+        localStorage.setItem("historicoFamília" , "");
+        localStorage.setItem("historicoIC002" , "");
+        for (let i = 0; i < contactos.length; i++){
+            localStorage.setItem("historico" + contactos[i] , "");
+        }
+        gravaHistorico();
         
     }else{
         localStorage.setItem('wasVisited', true);
@@ -30,3 +39,4 @@ function gravaHistorico() {
 
 
 window.addEventListener("load", principal);
+

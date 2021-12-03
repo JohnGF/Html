@@ -22,14 +22,17 @@ let contactos;
 
 let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
 
-let imagemEscolhida = localStorage.getItem('imagem')
+let imagemAtiva = localStorage.getItem('imagemEscolhida')
+
+let imagem = localStorage.getItem('imagem')
+
+let avatar = localStorage.getItem('avatar')
 
 let cam = "Resources/noCam.png";
 
 let mic = "Resources/Mute.png";
 
 let audio = "Resources/Audio_mute.png";
-
 
 
 

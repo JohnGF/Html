@@ -100,6 +100,14 @@ footer {
 	text-align: center;
 }
 
+/*
+.logoInicial{
+	margin: auto;
+	text-align: center;
+	bottom: 80%;
+
+}*/
+
 .logoInicial img{
 	max-width: 300px;
     max-height: 300px;
@@ -258,11 +266,13 @@ h3 {
 	padding: 1%;
   }
 
+/*  
 .functions a:hover {
 	background-color: #659ba7;
 	color: black;
 	border-radius: 35px;
 }
+*/
 
 img.function{
 	max-width: 50px;
@@ -316,13 +326,24 @@ textarea {
 	font-size: 16px;
 }
 
-button#enviaMensagem{
-	border-radius: 25px;
-	position: absolute;
-	bottom: 10px; 
-	right: 10px;
-	width: 40px;
-	height: 35px;
+button#enviaMensagem {
+    border-radius: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #63bbb5;
+}
+
+button#enviarMensagem {
+    border-radius: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 35px;
     cursor: pointer;
     background-color: #63bbb5;
 }
@@ -380,6 +401,7 @@ div#chatBox {
     vertical-align: bottom;
     display: flex;
 	overflow: scroll;
+	overflow-x: hidden;
 }
 
 p.paragrafo {
@@ -635,4 +657,47 @@ p.nomeContacto{
     top: -18px;
     margin-left: 15px;
     position: relative;
+}
+
+#escolhaFicheiro div{
+	height: max-content;
+	width: 290px;
+	text-align: center;
+	font-size: 13pt;
+	z-index: 3;
+	border: groove #112031;
+	border-radius: 25px;
+	margin-left: -242px;
+}
+
+#escolhaFicheiro label{
+	margin: 0 10px;
+}
+
+#escolhaFicheiro form{
+	margin: 20px;
+}
+
+#escolhaFicheiro button{
+	margin: 0 20px 20px;
+	font-size: 20px;
+    background-color: #345B63;
+    width: 80px;
+    height: 40px;
+    border-radius: 2em;
+    color: #D4ECDD;
+    border: #152D35 solid 3px;
+}
+
+#escolhaFicheiro input{
+	margin: 20px 55px;
+}
+
+#escolhaFicheiro img{
+	width: 30px;
+}
+
+.logoContactos {
+	max-height: 300px;
+	max-width: 300px;
 }
