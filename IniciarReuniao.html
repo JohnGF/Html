@@ -66,7 +66,7 @@
       <h1 id = "chatBar">Chat</h1><br>
       <a type="button" class="fechaJanela" onclick="abreChat()"><img class="fechar" src="Resources/back.png"></a>
       <div id = "chatBox" class="scroll"></div>
-      <textarea placeholder="Escreva uma mensagem..." onkeyup="verificaChat()" id="mensagem" required></textarea>
+      <textarea placeholder="Escreva uma mensagem..." onkeyup="verificaChatReuniao()" id="mensagem" required></textarea>
       <button type="submit" id ="enviarMensagem" class="enviaMensagem" disabled onclick="imprimeMensagem('mensagem', 'chatBox','enviarMensagem', false)"><img class="enviar" src="Resources/enviar.png"></button>
       <button type="button" class="enviaFicheiros" onclick="toggleEscolha('mensagem', 'chatBox')"><img class="ficheiros" src="Resources/anexo.png"></button>
     
@@ -80,7 +80,7 @@
     
         <form id="frmNovoGrupo">
 
-          <div onclick="clicaFicheiro('anexo1')"><label for="anexo1"> <img src="Resources/pdf.png" alt="Ficheiro PDF Anexo1"> anexo1</label><input id="anexo1" type="radio" classe="ficheiro" name="ficheiro" value="anexo1"></div>
+          <div onclick="clicaFicheiro('anexo1')"><label for="anexo1"> <img src="Resources/pdf.png" alt="Ficheiro PDF Anexo1"> anexo1</label><input checked id="anexo1" type="radio" classe="ficheiro" name="ficheiro" value="anexo1"></div>
           <hr>
           <div onclick="clicaFicheiro('trabalhoFinal')"><label for="trabalhoFinal"><img src="Resources/pdf.png" alt="Ficheiro PDF trabalhoFinal"> trabalhoFinal</label><input id="trabalhoFinal" type="radio" classe="ficheiro" name="ficheiro" value="trabalhoFinal"></div>
           <hr>

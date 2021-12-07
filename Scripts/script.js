@@ -30,9 +30,9 @@ let avatar = localStorage.getItem('avatar')
 
 let cam = "Resources/noCam.png";
 
-let mic = "Resources/mic.png";
+let mic = "Resources/Mute.png";
 
-let audio = "Resources/audio.png";
+let audio = "Resources/audio_mute.png";
 
 
 
@@ -63,6 +63,8 @@ function defineEventHandlersParaElementosHTML() {
 
 
 function verificaDados(){
+   
+
     obtemDados();
     let antigo = document.getElementById("alerta");
     if (nomegrupo == "") {
@@ -80,7 +82,7 @@ function verificaDados(){
         antigo.replaceWith(paragrafo);
         return 0;
     }
-
+    
     let dadosValidos = formulario.reportValidity();
     let dados = null;
 

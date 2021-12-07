@@ -33,13 +33,13 @@ function abreConversa(nome){
     '<img '+ detalhesOver + detalhesOut + 'id="more" src="Resources/grupos.png" height="60"/>  '+
     '</div><div id = "conversa">'+
     '<div id = "caixaConversa" class="scroll"></div>'+
-    '<textarea placeholder="Escreva uma mensagem..." id="mensagemConversa"></textarea>'+
-    '<button id="enviaMensagem" onclick="imprimeMensagem(`mensagemConversa`, `caixaConversa`, `enviarMensagem`, true)" style="height: 50px; width: 50px;"><img class="enviar" src="Resources/enviar.png"></button>'+
+    '<textarea placeholder="Escreva uma mensagem..."  onkeyup="verificaChatConversa()" id="mensagemConversa"></textarea>'+
+    '<button id="enviaMensagem" disabled onclick="imprimeMensagem(`mensagemConversa`, `caixaConversa`, `enviaMensagem`, true)" style="height: 50px; width: 50px;"><img class="enviar" src="Resources/enviar.png"></button>'+
     '<button type="button" class="enviaFicheiros" onclick= "toggleEscolha(`mensagemConversa`, `caixaConversa`)" style="height: 50px; width: 50px;"><img class="ficheiros" src="Resources/anexo.png"></button>'+
     '</div>';
     a.replaceWith(newnode);
     criaConversa(nome);
-    enviaEnter()
+    enviaEnterConversa()
 
     if (localStorage.getItem("paginaAtual") != localStorage.getItem("paginaAnterior")){
         historicoMensagens = [];
@@ -76,7 +76,7 @@ function adicionaLista(nomeGrupo){
 function imprimeMensagem(id1,id2, botao, guarda){ 
     
     var mensagem=document.getElementById(id1).value;
-    if (mensagem != ""){
+    if (mensagem != " "){
         var resposta = document.createTextNode(mensagem);
         var div = document.getElementById(id2);
         var paragrafo = document.createElement("p");
@@ -95,11 +95,24 @@ function imprimeMensagem(id1,id2, botao, guarda){
 }
 
 
-function verificaChat(){
-    if (document.getElementById("mensagem").value != ""){
-        document.getElementById("enviarMensagem").disabled=false; 
-    }   
+function verificaChatConversa(){
+    
+    if(document.getElementById("mensagemConversa").value==="") { 
+        document.getElementById('enviaMensagem').disabled = true; 
+    } else { 
+        document.getElementById('enviaMensagem').disabled = false;
+    }
 }
+
+function verificaChatReuniao(){
+    
+    if(document.getElementById("mensagem").value==="") { 
+        document.getElementById('enviarMensagem').disabled = true; 
+    } else { 
+        document.getElementById('enviarMensagem').disabled = false;
+    }
+}
+
 
 function verificaConversa(){
     if (document.getElementById("mensagemConversa").value != ""){
@@ -127,6 +140,7 @@ function enviaFicheiro(){
 }
 
 function toggleEscolha(id1,id2){
+    
     var escolha = document.getElementById("escolhaFicheiro");
     if (escolha.hidden == true) {
         escolha.hidden = false;
@@ -152,19 +166,21 @@ function clicaFicheiro(id){
 }
 
 
-function enviaEnter(){
-    
-var input = document.getElementById("mensagemConversa");
-input.addEventListener("keyup", function(event) {
-    if(document.getElementById("mensagemConversa").value == ""){}
-    else{
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("enviaMensagem").click();
-   document.getElementById("mensagemConversa").value = "";
-  }}
+function enviaEnterConversa(){
+    var input = document.getElementById("mensagemConversa");
+    input.addEventListener("keyup", function(event) {
+        if(document.getElementById("mensagemConversa").value == ""){}
+        else{
+    if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("enviaMensagem").disabled = false;
+    document.getElementById("enviaMensagem").click();
+    document.getElementById("mensagemConversa").value = "";
+    document.getElementById("enviaMensagem").disabled = true;
+    }}
 });
 }
+
 
 function carregaMensagens(pag){
     var mensagens =  localStorage.getItem("historico"+pag);

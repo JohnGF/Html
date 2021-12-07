@@ -6,6 +6,7 @@ var acaoCam = "Ligar Cam"
 var acaoChat = "Chat"
 var acaoPartilha = "Partilha Ecrã"
 
+
 function abreChamada(nome){
     removeChat()
     nome = nome + ""
@@ -52,7 +53,6 @@ function mostraFunc(id){
     }
 }
 
-
 function criaDetalhes(nome,detalhes){
     let lista = mostraParticipantes(nome)
     var p = document.createElement("p");
@@ -86,7 +86,7 @@ function mostraParticipantes(nome,img){
             result += '<br>' 
         }  
     }
-    result += '<img src="Resources/Avatars/'+ avatar+'" height="40"/> Eu'
+    result += '<img src="Resources/Avatars/'+ avatar +'" height="40"/> Eu'
     return result;
 }
 
@@ -101,14 +101,13 @@ function mostraAvatares(nome){
         }
     } else{
         let part = grupos[nome];
-        for(var cada in part){            
-            result += '<div class="cadaPart">'+'<img src="Resources/Avatars/'+part[cada]+'Img.jpeg" height="260"/> <span class="nomeParticipante">' + part[cada]+'</span></div>'
- 
+        for(var cada in part){
+            result += '<img src="Resources/Avatars/'+part[cada]+'Img.jpeg" height="260"/>' 
         }
         result += '<br>'
     }
     result += '<br>'
-    result += '<div id="meuAvatar" ><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
+    result += '<div><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
     return result;
 }
 
@@ -125,13 +124,13 @@ function compartilhaTela() {
 
 function abreChat(){
     var chat = document.getElementById("chat");
-    if (chat.hidden) {
+    if (chat.hidden == true) {
         chat.hidden = false;
-        
     } else {
         chat.hidden = true;
-        
+        //removeChat()
     }
+    enviaEnterReuniao()
 }
 
 function removeChat() {
@@ -149,27 +148,22 @@ function mudarCam(nome){
     if (imagemAtiva == "EuMascA.png") {
         imagemAtiva = "EuMascImg.jpeg"
         cam = "Resources/cam.png"
-        acaoCam = "Desligar Cam"
         localStorage.setItem('imagem', imagemAtiva);
 
     } else {
         imagemAtiva = "EuMascA.png"
         cam = "Resources/noCam.png"
-        acaoCam = "Ligar Cam"
         localStorage.setItem('imagem', imagemAtiva);
     }
     abreChamada(nome)
 }
 
-
 function mudarMic(nome){    
     if (mic == "Resources/Mute.png") {
         mic = "Resources/mic.png"
-        acaoMic = "Desligar Mic"
 
     } else {
         mic = "Resources/Mute.png"
-        acaoMic = "Ligar Mic"
     }
     abreChamada(nome)
 }
@@ -177,11 +171,26 @@ function mudarMic(nome){
 function mudarAudio(nome){    
     if (audio == "Resources/audio_mute.png") {
         audio = "Resources/audio.png"
-        acaoAudio = "Desligar Audio"
 
     } else {
         audio = "Resources/audio_mute.png"
-        acaoAudio = "Ligar Audio"
     }
     abreChamada(nome)
+}
+
+function enviaEnterReuniao(){
+    var input = document.getElementById("mensagem");
+    input.addEventListener("keyup", function(event) {
+        if(document.getElementById("mensagem").value === ""){
+            return 0;
+        }
+        else{
+    if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("enviarMensagem").disabled = false;
+    document.getElementById("enviarMensagem").click();
+    document.getElementById("mensagem").value = "";
+    document.getElementById("enviarMensagem").disabled = true;
+    }}
+});
 }

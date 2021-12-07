@@ -316,7 +316,7 @@ textarea#mensagem{
 	left: 52px;
 }
 
-button#enviaMensagem {
+button#enviaMensagem:enabled {
     border-radius: 25px;
     position: absolute;
     bottom: 10px;
@@ -327,7 +327,7 @@ button#enviaMensagem {
     background-color: #63bbb5;
 }
 
-button#enviarMensagem {
+button#enviarMensagem:enabled {
     border-radius: 25px;
     position: absolute;
     bottom: 10px;
@@ -511,7 +511,7 @@ form{
 	
 }
 
-button#botaoCriarGrupo{
+button#botaoCriarGrupo:enabled{
 	font-size: 20px;
     background-color: #345B63;
     width: 80px;
@@ -519,6 +519,17 @@ button#botaoCriarGrupo{
     border-radius: 2em;
     color: #D4ECDD;
     border: #152D35 solid 3px;
+	
+}
+
+button#botaoCriarGrupo:disabled{
+	font-size: 20px;
+    background-color: #4f666ab4;
+    width: 80px;
+    height: 40px;
+    border-radius: 2em;
+    color: #a1aea6;
+    border: #738084 solid 3px;
 	
 }
 
@@ -557,7 +568,12 @@ img.fotoAtualUtilizador{
 	border-radius: 19px;
 	background-color: #112031;
 	margin: 5px;
-	
+}
+#perfis div{
+	text-align: right;
+	position: absolute;
+	right: 5px;
+	bottom: 77px;
 }
 
 #alerta{
@@ -712,6 +728,35 @@ div#escolhaFicheiro {
 	margin-right: 0;
 }
 
+button#enviaMensagem:disabled {
+    border-radius: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #c1e4e2;
+}
+
+button#enviarMensagem:disabled {
+    border-radius: 25px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #c1e4e2;
+}
+
+
+.menuChecked{
+	background-color: rgb(42, 69, 76,0.7); 
+	transform: scale(1.2);
+	border-top-right-radius:0 ;
+	border-top-left-radius:0 ;
+}
 
 #acaoMic, #acaoAudio, #acaoCam, #acaoChat, #acaoPartilha{
 	position: absolute;
@@ -766,5 +811,3 @@ div.functions{
 	right: 5px;
 	bottom: 77px;
 }
-
-
