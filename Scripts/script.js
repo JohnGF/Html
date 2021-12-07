@@ -20,7 +20,7 @@ let grupos = {};
 
 let contactos;
 
-let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
+let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "João", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
 
 let imagemAtiva = localStorage.getItem('imagemEscolhida')
 
@@ -30,9 +30,9 @@ let avatar = localStorage.getItem('avatar')
 
 let cam = "Resources/noCam.png";
 
-let mic = "Resources/Mute.png";
+let mic = "Resources/mic.png";
 
-let audio = "Resources/Audio_mute.png";
+let audio = "Resources/audio.png";
 
 
 

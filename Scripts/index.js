@@ -1,7 +1,3 @@
-if(sessionStorage.getItem("darkmode")=="light"){
-    document.querySelector('body').classList.toggle('light')
-}
-if(sessionStorage.getItem("darkmode")=="dark"){document.querySelector('body').classList.toggle('dark')}
 "use strict";
 
 let grupos = {};

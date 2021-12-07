@@ -1,48 +1,89 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Styles/Calendario.css">
-</head>
-<div id="top-header">               
-    <!-- Navigation Menu -->
-    <nav>
-      <div class="container">
-        
-        <div class="menuLeft">
-          <ul> 
-              <li><a href="index.html"><b>Página Inicial</b></a></li>
-              <li><a href="Agenda.html"><b>Agenda</b></a></li>
-              <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
-              <li><a href="Definicoes.html"><b>Definições</b></a></li>
-              <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
-              <li class="logoBar">
-                <div class="menuRight">
-                  <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
-  
-                </div>
-              </li>
-              <li></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-</div>   
-<body class="light">
-    <div class="definicoes">
-        <div class="calendar-footer">
-            <div class="toggle">
-                <span>Dark Mode</span>
-                <div class="dark-mode-switch">
-                    <div class="dark-mode-switch-ident"></div>
-                </div>
-            </div>
-        </div>   
-    </div>
-    <script src="Scripts/Ajuda.js"></script>
-</body>
+<!DOCTYPE html>
 
+<html lang = "pt">
+<head>
+ 
+  <title>Ajuda</title>
+  
+</head>
+
+<body id="container">
+
+
+  <header>
+      <link rel="stylesheet" href="Styles/style.css"> 
+      <link rel="stylesheet" href="Styles/ajuda.css"> 
+      <script src="Scripts/ajuda.js"></script>  
+      <script src="Scripts/script.js"></script>  
+   
+      <div id="top-header">               
+          <nav>
+            <div class="container">
+              
+              <div class="menuLeft">
+                <ul> 
+                  <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
+                  <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                  <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                  <li><a href="Definicoes.html"><b>Definições</b></a></li>
+                  <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
+              </ul>
+              </div>
+            </div>
+          </nav>
+      </div>   
+      <div id="header-image-menu">
+  
+      </div>
+
+      
+  </header>
+  <section class="perguntas">
+    <div class="cartaoPergunta">
+      <h3>Como posso agendar um evento?</h3>
+      <p>Abra a <b>agenda</b>, escolha o dia, indique as horas e, se preferir, outras informações, por fim guarde o evento</p>
+    </div>
+  
+    <div class="cartaoPergunta">
+      <h3>Como posso ver um evento que marquei na agenda?</h3>
+      <p>Abra a <b>agenda</b> e clique no dia do evento para conseguir ver as suas informações</p>
+    </div>
+  
+  <div class="cartaoPergunta">
+      <h3>Como criar um novo grupo/contacto?</h3>
+          <p>Abra a <b>lista de contactos</b> clique no <img src="Resources/new.png" height="25" alt=""> que pertence à secção à qual pretende adicionar um elemento</p>
+    </div>
+  
+    <div class="cartaoPergunta">
+        <h3>Como entro numa Reunião?</h3>
+        <p>Na Página Inicial clique no botão <b>Entrar numa Reunião</b> e escolha o grupo/contacto</p>
+    </div>
+  </section>
+
+  <section class="perguntas">
+  <div class="cartaoPergunta">
+      <h3>Como posso abrir o chat?</h3>
+        <p>Quando está numa reunião clique em <img src="Resources/chat.png" height="25"> e envie a sua mensagem</p>
+    </div>
+  
+  <div class="cartaoPergunta">
+      <h3>Como abrir uma conversa a partir da lista de contactos?</h3>
+        <p>Abra a <b>lista de contactos</b> e clique no grupo/contacto com quem pretende conversar</p>
+    </div>
+  
+  <div class="cartaoPergunta">
+      <h3>Como enviar um ficheiro?</h3>
+        <p>Na <b>conversa</b>/<b>chat de reunião</b> clique em <img class="ficheiros" src="Resources/anexo.png" height="25"> escolha o ficheiro e clique em Enviar</p>
+    </div>
+  
+  <div class="cartaoPergunta">
+      <h3>Como posso alterar as minhas definições?</h3>
+        <p>Abra as <b>Definições</b> altere o que deseja e guarde a sua opção</p>
+    </div>
+  
+  </section>
+  
+
+</body>
 
 </html>

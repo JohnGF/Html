@@ -9,7 +9,7 @@
   
 </head>
 
-<body>
+<body id="container">
 
 
   <header>
@@ -28,19 +28,12 @@
               
               <div class="menuLeft">
                 <ul> 
-                  <li><a href="index.html"><b>Página Inicial</b></a></li>
+                  <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
                   <li><a href="Agenda.html"><b>Agenda</b></a></li>
                   <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
                   <li><a href="Definicoes.html"><b>Definições</b></a></li>
-                  <li><a href="#"><b>Ajuda</b></a></li>
-                  <li class="logoBar">
-                      <div class="menuRight">
-                        <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
-        
-                      </div>
-                    </li>
-                    <li></li>
-                </ul>
+                  <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
+              </ul>
               </div>
             </div>
           </nav>
@@ -60,9 +53,9 @@
           <div class="scroll">
             <h2>Lista de Contactos </h2><hr> 
             <h3>Grupos</h3> 
-            <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
+            <a class = "novo" href="NovoGrupo.html"><img src="Resources/new.png" height="40" alt=""></a><br>
             <div id="grupos"></div>
-            <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
+            <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html"><img src="Resources/new.png" height="40" alt=""></a> <br>
             <div id="contactos"></div>
             
           </div>
@@ -87,20 +80,15 @@
           <a type="button" class="fechaJanela" onclick="toggleEscolha()"><img class="fechar" src="Resources/back.png"></a>
       
           <form id="frmNovoGrupo">
-            <label for="anexo1"> <img src="Resources/pdf.png" alt="Ficheiro PDF Anexo1"> anexo1</label>
-            <label for="trabalhoFinal"><img src="Resources/pdf.png" alt="Ficheiro PDF trabalhoFinal"> trabalhoFinal</label>
-
-            <input type="radio" classe="ficheiro" name="ficheiro" value="anexo1">
-            <input type="radio" classe="ficheiro" name="ficheiro" value="trabalhoFinal">
-
-            <br><br>
-            <label for="projetoIC"> <img src="Resources/pdf.png" alt="Ficheiro PDF projetoIC"> projetoIC</label>
-            <label for="teseFinal"> <img src="Resources/pdf.png" alt="Ficheiro PDF teseFinal"> teseFinal</label>
-
+            <div onclick="clicaFicheiro('anexo1')"><label for="anexo1"> <img src="Resources/pdf.png" alt="Ficheiro PDF Anexo1"> anexo1</label><input id="anexo1" type="radio" classe="ficheiro" name="ficheiro" value="anexo1"></div>
+            <hr>
+            <div onclick="clicaFicheiro('trabalhoFinal')"><label for="trabalhoFinal"><img src="Resources/pdf.png" alt="Ficheiro PDF trabalhoFinal"> trabalhoFinal</label><input id="trabalhoFinal" type="radio" classe="ficheiro" name="ficheiro" value="trabalhoFinal"></div>
+            <hr>
+            <div onclick="clicaFicheiro('projetoIC')"><label for="projetoIC"> <img src="Resources/pdf.png" alt="Ficheiro PDF projetoIC"> projetoIC</label><input id="projetoIC" type="radio" classe="ficheiro" name="ficheiro" value="projetoIC"></div>
+            <hr>
+            <div onclick="clicaFicheiro('teseFinal')"><label for="teseFinal"> <img src="Resources/pdf.png" alt="Ficheiro PDF teseFinal"> teseFinal</label><input id="teseFinal" type="radio" classe="ficheiro" name="ficheiro" value="teseFinal"></div>
             
-            <input type="radio" classe="ficheiro" name="ficheiro" value="projetoIC">
-            <input type="radio" classe="ficheiro" name="ficheiro" value="teseFinal">
-
+  
             <br><br>
             <button type="button" id = "enviarFicheiro" onclick="enviaFicheiro()"><h4>Enviar</h4></button>
           </form>

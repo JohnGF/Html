@@ -1,6 +1,13 @@
 "use strict";
 
+var acaoAudio = "Desligar Audio"
+var acaoMic = "Desligar Mic"
+var acaoCam = "Ligar Cam"
+var acaoChat = "Chat"
+var acaoPartilha = "Partilha Ecrã"
+
 function abreChamada(nome){
+    removeChat()
     nome = nome + ""
     var mudaCamera = 'onclick="mudarCam(`'+ nome + '`)"';
     var mudaMic = 'onclick="mudarMic(`'+ nome + '`)"';
@@ -12,21 +19,39 @@ function abreChamada(nome){
     newnode.className="chamada tdConversa"
     newnode.id="replaced";
     newnode.innerHTML='<div class="functions">'+
-    '<a '+ mudaMic + '><img class="function" src='+mic+'></a>'
-    +'<a '+ mudaAudio + '><img class="function" src='+audio+'></a>'
-    +'<a '+ mudaCamera + '><img id="cam" class="function" src='+cam+'></a>'+
-    '<a onclick="abreChat()"><img class="function" src="Resources/chat.png"></a>'+
-    '<a onclick="compartilhaTela()"><img class="function" src="Resources/sharescreen.png"></a>'+
+    '<a '+ mudaMic + ' onmouseover = "mostraFunc(`acaoMic`)" onmouseout = "mostraFunc(`acaoMic`)"><img class="function" src='+mic+'></a>'
+    + '<p id="acaoMic" hidden>' + acaoMic +'</p>'
+    +'<a '+ mudaAudio + 'onmouseover = "mostraFunc(`acaoAudio`)" onmouseout = "mostraFunc(`acaoAudio`)"><img class="function" src='+audio+'></a>'
+    + '<p id="acaoAudio" hidden>' + acaoAudio +'</p>'
+    +'<a '+ mudaCamera + ' onmouseover = "mostraFunc(`acaoCam`)" onmouseout = "mostraFunc(`acaoCam`)"><img id="cam" class="function" src='+cam+'></a>'+
+    '<p id="acaoCam" hidden>' + acaoCam +'</p>'+
+    '<a onclick="abreChat()" onmouseover = "mostraFunc(`acaoChat`)" onmouseout = "mostraFunc(`acaoChat`)" ><img class="function" src="Resources/chat.png"></a>'+
+    '<p id="acaoChat" hidden>' + acaoChat +'</p>'+
+    '<a onclick="compartilhaTela()" onmouseover = "mostraFunc(`acaoPartilha`)" onmouseout = "mostraFunc(`acaoPartilha`)" ><img class="function" src="Resources/sharescreen.png"></a>'+
+    '<p id="acaoPartilha" hidden>' + acaoPartilha +'</p>'+
     '<a id="nomeChamada" '+ detalhesOver + detalhesOut + '>'+nome+'</a>'+
     '<a href="IniciarReuniao.html" id = "leaveButton"><img class="function" src="Resources/leave.png"></a>'+
     '</div>';
     
     var div=document.createElement("div");
     div.id = "perfis"
+    div.className = "scroll"
     div.innerHTML = mostraAvatares(nome)
     newnode.appendChild(div)
     a.replaceWith(newnode);
+    var chat = document.getElementById("chat");
+    chat.hidden = true;
 }
+
+function mostraFunc(id){
+    var elemento = document.getElementById(id);
+    if (elemento.hidden == true) {
+        elemento.hidden = false;
+    } else {
+        elemento.hidden = true;
+    }
+}
+
 
 function criaDetalhes(nome,detalhes){
     let lista = mostraParticipantes(nome)
@@ -70,19 +95,20 @@ function mostraAvatares(nome){
     var result = '';
     if (contactos.includes(nome)){
         if(contactosInicial.includes(nome)){
-            result = '<img src="Resources/Avatars/'+nome+'Img.jpeg" height="400"/>'
+            result = '<img src="Resources/Avatars/'+nome+'Img.jpeg" height="450"/>'
         } else{
-            result = '<img src="Resources/Avatars/user.png" height="400"/>'
+            result = '<img src="Resources/Avatars/user.png" height="450"/>'
         }
     } else{
         let part = grupos[nome];
-        for(var cada in part){
-            result += '<img src="Resources/Avatars/'+part[cada]+'Img.jpeg" height="200"/>' 
+        for(var cada in part){            
+            result += '<div class="cadaPart">'+'<img src="Resources/Avatars/'+part[cada]+'Img.jpeg" height="260"/> <span class="nomeParticipante">' + part[cada]+'</span></div>'
+ 
         }
         result += '<br>'
     }
     result += '<br>'
-    result += '<div><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
+    result += '<div id="meuAvatar" ><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
     return result;
 }
 
@@ -99,34 +125,51 @@ function compartilhaTela() {
 
 function abreChat(){
     var chat = document.getElementById("chat");
-    if (chat.hidden == true) {
+    if (chat.hidden) {
         chat.hidden = false;
+        
     } else {
         chat.hidden = true;
+        
     }
 }
 
+function removeChat() {
+    var x = 0;
+    var lista = document.getElementsByClassName("paragrafo")
+    var len = document.getElementsByClassName("paragrafo").length
+    
+    while (x < len){
+    lista[0].remove();
+    x++
+    }
+  }
 
 function mudarCam(nome){    
     if (imagemAtiva == "EuMascA.png") {
         imagemAtiva = "EuMascImg.jpeg"
         cam = "Resources/cam.png"
+        acaoCam = "Desligar Cam"
         localStorage.setItem('imagem', imagemAtiva);
 
     } else {
         imagemAtiva = "EuMascA.png"
         cam = "Resources/noCam.png"
+        acaoCam = "Ligar Cam"
         localStorage.setItem('imagem', imagemAtiva);
     }
     abreChamada(nome)
 }
 
+
 function mudarMic(nome){    
     if (mic == "Resources/Mute.png") {
         mic = "Resources/mic.png"
+        acaoMic = "Desligar Mic"
 
     } else {
         mic = "Resources/Mute.png"
+        acaoMic = "Ligar Mic"
     }
     abreChamada(nome)
 }
@@ -134,9 +177,11 @@ function mudarMic(nome){
 function mudarAudio(nome){    
     if (audio == "Resources/audio_mute.png") {
         audio = "Resources/audio.png"
+        acaoAudio = "Desligar Audio"
 
     } else {
-        audio = "Resources/Audio_mute.png"
+        audio = "Resources/audio_mute.png"
+        acaoAudio = "Ligar Audio"
     }
     abreChamada(nome)
 }

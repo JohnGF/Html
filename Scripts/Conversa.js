@@ -34,7 +34,7 @@ function abreConversa(nome){
     '</div><div id = "conversa">'+
     '<div id = "caixaConversa" class="scroll"></div>'+
     '<textarea placeholder="Escreva uma mensagem..." id="mensagemConversa"></textarea>'+
-    '<button id="enviaMensagem" onclick="imprimeMensagem(`mensagemConversa`, `caixaConversa`, `enviarMensagem`)" style="height: 50px; width: 50px;"><img class="enviar" src="Resources/enviar.png"></button>'+
+    '<button id="enviaMensagem" onclick="imprimeMensagem(`mensagemConversa`, `caixaConversa`, `enviarMensagem`, true)" style="height: 50px; width: 50px;"><img class="enviar" src="Resources/enviar.png"></button>'+
     '<button type="button" class="enviaFicheiros" onclick= "toggleEscolha(`mensagemConversa`, `caixaConversa`)" style="height: 50px; width: 50px;"><img class="ficheiros" src="Resources/anexo.png"></button>'+
     '</div>';
     a.replaceWith(newnode);
@@ -73,7 +73,7 @@ function adicionaLista(nomeGrupo){
 }
 
 
-function imprimeMensagem(id1,id2, botao){ 
+function imprimeMensagem(id1,id2, botao, guarda){ 
     
     var mensagem=document.getElementById(id1).value;
     if (mensagem != ""){
@@ -85,11 +85,13 @@ function imprimeMensagem(id1,id2, botao){
         div.prepend(paragrafo);
         document.getElementById(id1).value = "";
         document.getElementById(botao).disabled=true; 
+        if (guarda){
         historicoMensagens.push(  
             document.getElementsByClassName("paragrafo")[0].innerHTML
         )
         localStorage.setItem("historico"+pagAtual, historicoMensagens);
-    }  
+        } 
+    }
 }
 
 
@@ -142,6 +144,11 @@ function escolherFicheiro(){
             return elemento[i].value;
         }
     }
+}
+
+function clicaFicheiro(id){
+    let elemento = document.getElementById(id);
+   elemento.checked = true;
 }
 
 

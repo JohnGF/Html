@@ -9,7 +9,7 @@
   
 </head>
 
-<body>
+<body id="container">
 
 
   <header>
@@ -26,19 +26,12 @@
               
               <div class="menuLeft">
                 <ul> 
-                  <li><a href="index.html"><b>Página Inicial</b></a></li>
+                  <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
                   <li><a href="Agenda.html"><b>Agenda</b></a></li>
                   <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
                   <li><a href="Definicoes.html"><b>Definições</b></a></li>
-                  <li><a href="#"><b>Ajuda</b></a></li>
-                  <li class="logoBar">
-                      <div class="menuRight">
-                        <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
-        
-                      </div>
-                    </li>
-                    <li></li>
-                </ul>
+                  <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
+              </ul>
               </div>
             </div>
           </nav>
@@ -58,10 +51,10 @@
             <div class="scroll">
               <h2>Lista de Contactos </h2><hr> 
               <h3>Grupos</h3> 
-              <a class = "novo" href="NovoGrupo.html">Novo Grupo</a><br>
-              <div id="grupos" onclick = "location.href = 'ListaContactos.html'"></div>
-              <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html">Novo Contacto</a> <br>
-              <div id="contactos" onclick = "location.href = 'ListaContactos.html'"></div>
+              <a class = "novo" href="NovoGrupo.html"><img src="Resources/new.png" height="40" alt=""></a><br>
+              <div id="grupos"></div>
+              <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html"><img src="Resources/new.png" height="40" alt=""></a> <br>
+              <div id="contactos"></div>
               
             </div>
             
