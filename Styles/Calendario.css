@@ -4,15 +4,12 @@
     --dark-second: #79788c;
     --dark-hover: #323048;
     --dark-text: #f8fbff;
-    --dark-background:#323048;
 
     --light-body: #f3f8fe;
     --light-main: #fdfdfd;
     --light-second: #c3c2c8;
     --light-hover: #edf0f5;
     --light-text: #151426;
-    --light-background:#D4ECDD;
-
 
     --blue: #0000ff;
     --white: #fff;
@@ -28,7 +25,6 @@
     --bg-second: var(--dark-second);
     --color-hover: var(--dark-hover);
     --color-txt: var(--dark-text);
-    --bg-color:var(--light-background);
 }
 
 .light {
@@ -37,7 +33,6 @@
     --bg-second: var(--light-second);
     --color-hover: var(--light-hover);
     --color-txt: var(--light-text);
-    --light-background:#D4ECDD;
 }
 
 * {
@@ -60,7 +55,7 @@ body {
 .calendar {
     height: max-content;
     width: max-content;
-    bottom: 0px;
+    bottom: 100px;
     background-color: var(--bg-main);
     border-radius: 30px;
     padding: 20px;
@@ -319,12 +314,12 @@ body {
 }
 
 .Event_box{
-    background-color: blanchedalmond;
+    background-color: rgb(159, 211, 195);
     width: 300px;
     height: 300px;
     margin: 10px;
     top:30px;
-    left:200px;
+    left:280px;
     position: relative;
     border-radius: 30px;
 }
@@ -425,4 +420,20 @@ li a:hover, li a:checked{
 	position: relative;
 	left: 95%;
 	display: inline-block;
+}
+
+
+#top-headerAgenda{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+}
+
+body{
+    margin-top: -15%;
+}
+#eventos_dia{
+    width: 255px;
+    height: 150px;
 }

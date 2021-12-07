@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +12,36 @@
     <link rel="stylesheet" href="Styles/Calendario.css">
 </head>
 <!--  -->
-<div id="top-header">               
-    <!-- Navigation Menu -->
-    <nav>
-      <div class="container">
-        
-        <div class="menuLeft">
-          <ul> 
-              <li><a href="index.html"><b>Página Inicial</b></a></li>
-              <li><a href="Agenda.html"><b>Agenda</b></a></li>
-              <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
-              <li><a href="Definicoes.html"><b>Definições</b></a></li>
-              <li><a href="#"><b>Ajuda</b></a></li>
-              <li class="logoBar">
-                <div class="menuRight">
-                  <img class="fitLogo" src="Resources\Logo.png"  alt="Logo da Aplicação"/>
-  
+<body id="container">
+    <header id="top-headerAgenda">
+        <link rel="stylesheet" href="Styles/style.css"> 
+        <link rel="stylesheet" href="Styles/ajuda.css"> 
+        <script src="Scripts/ajuda.js"></script>  
+        <script src="Scripts/script.js"></script>  
+     
+        <div id="top-header">               
+            <nav>
+              <div class="container">
+                
+                <div class="menuLeft">
+                    <ul> 
+                        <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
+                        <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                        <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                        <li><a href="Definicoes.html"><b>Definições</b></a></li>
+                        <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
+                    </ul>
                 </div>
-              </li>
-              <li></li>
-          </ul>
+              </div>
+            </nav>
+        </div>   
+        <div id="header-image-menu">
+    
         </div>
-      </div>
-    </nav>
-</div>   
-<!--  -->
-<body class="light">
+  
+        
+    </header>
+<div class="light">
     
     <div class="Event_box">
         <div id= "dia_selecionado" >Dia atual</div>
@@ -126,5 +131,6 @@
     </div>
 
     <script src="Scripts/Agenda.js"></script>
+</div>
 </body>
 </html>
