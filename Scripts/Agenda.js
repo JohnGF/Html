@@ -1,3 +1,4 @@
+
 let calendar = document.querySelector('.calendar')
 
 const month_names = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
@@ -140,10 +141,25 @@ document.querySelector('#next-year').onclick = () => {
 }
 
 let dark_mode_toggle = document.querySelector('.dark-mode-switch')
-
+sessionStorage.setItem("darkmode","light")
 dark_mode_toggle.onclick = () => {
-    document.querySelector('body').classList.toggle('light')
-    document.querySelector('body').classList.toggle('dark')
+    // sessionStorage.setItem("darkmode","light")
+    // document.querySelector('body').classList.toggle('light')
+
+    // sessionStorage.setItem("darkmode","dark")
+    // document.querySelector('body').classList.toggle('dark')
+    
+    if(sessionStorage.getItem("darkmode")=="light"){
+        document.querySelector('body').classList.toggle('dark')
+        sessionStorage.setItem("darkmode","dark")
+        console.log("vou para preto")
+        return
+    }
+    if(sessionStorage.getItem("darkmode")=="dark"){
+        document.querySelector('body').classList.toggle('light')
+        sessionStorage.setItem("darkmode","light")}
+        console.log("vou para branco")
+        return
 }
 //let dia_selecionado = document.querySelector(".calendar-days ")
 //let dias = dia_selecionado.children
