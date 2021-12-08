@@ -313,7 +313,8 @@ body {
     }
 }
 
-.Event_box{
+.Event_box,#display-eventos{
+    display: none;
     background-color: rgb(159, 211, 195);
     width: 300px;
     height: 300px;
@@ -348,6 +349,36 @@ border-radius: 25px;
     top: 45px;
 
     
+}
+#display-eventos{
+    display: block;
+    overflow: auto;
+}
+#display-eventos .titulo{
+    align-items: center;
+    width: 150px;
+    margin: auto;
+    padding: 5px;
+    position: inherit;
+    top: 10px;
+
+}
+#display-eventos p{
+    opacity: 1;
+    width: 250px;
+    color: white;
+    /* right: 10px; */
+    /* top: 10px; */
+    height: 25px;
+    background-color: #141529;
+    border-radius: 5px;
+    position: relative;
+    /* align-items: center; */
+    justify-content: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 /*  */
@@ -437,3 +468,56 @@ body{
     width: 255px;
     height: 150px;
 }
+
+ /* Popup container */
+ .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  } 

@@ -8,8 +8,12 @@ let horas=document.querySelector("#horas")
 let min=document.querySelector("#min")
 let s_day_id=0
 let dia_atual=document.querySelector("#dia_selecionado")
+let eventos_window=document.querySelector("#display-eventos") //bloco com os eventos
+let titulo_eventos=document.querySelector("#titulo") //titulos
 
 function event_window(id){
+    eventos_window.style.display = "none";
+    document.getElementById("popup").style.display = "block";
     let s_day_v=document.getElementById(id)
     dia_atual.innerHTML="Dia "+s_day_v.getAttribute("dia")
     
@@ -19,10 +23,18 @@ function event_window(id){
     {
         //text.value=sessionStorage.getItem(id)
         
-        text.value=json_aid.texto
-        horas.value=json_aid.tempo_h
-        min.value=json_aid.tempo_m
+        texto=json_aid.texto
+        dia=json_aid.dia
+        tempo_h=json_aid.tempo_h
+        tempo_m=json_aid.tempo_m
 
+        var infonode = document.createTextNode("Dia "+dia+ " Horas: "+tempo_h+"h"+tempo_m);
+        //var textnode = document.createTextNode(texto);
+        var evento = document.createElement("p");
+        evento.setAttribute("class", "eventos");
+        evento.appendChild(infonode);
+        //evento.appendChild(textnode);
+        eventos_window.append(evento);
     }
     else{
     text.value=null
@@ -34,14 +46,19 @@ function event_window(id){
     //document.getElementById(id).innerHTML = new HTML
     //sessionStorage.setItem(id,window.prompt("Enter your name: "))
 }
+//botão salvar agenda
 function eventos_dia(key){
+    let s_day_v=document.getElementById(key)
     let event_info_day ={
+        dia:s_day_v.getAttribute("dia"),
         tempo_h:horas.value,
         tempo_m:min.value,
         texto:text.value
     }
     //sessionStorage.setItem(key,text.value)  
     sessionStorage.setItem(key,JSON.stringify(event_info_day))  
+    document.getElementById("popup").style.display = "none";
+    eventos_window.style.display = "block";
 }
 const b_salvar=document.querySelector(".salvar")
 b_salvar.addEventListener("click",function(){eventos_dia(s_day_id)})
@@ -120,6 +137,8 @@ let month_picker = calendar.querySelector('#month-picker')
 month_picker.onclick = () => {
     month_list.classList.add('show')
     //console.log(month_list)
+
+    eventos_window.innerHTML='<div class="titulo">Eventos Marcados</div>';
 }
 
 let currDate = new Date()
@@ -132,11 +151,15 @@ generateCalendar(curr_month.value, curr_year.value)
 document.querySelector('#prev-year').onclick = () => {
     --curr_year.value
     generateCalendar(curr_month.value, curr_year.value)
+
+    eventos_window.innerHTML='<div class="titulo">Eventos Marcados</div>';
 }
 
 document.querySelector('#next-year').onclick = () => {
     ++curr_year.value
     generateCalendar(curr_month.value, curr_year.value)
+
+    eventos_window.innerHTML='<div class="titulo">Eventos Marcados</div>';
 }
 
 let dark_mode_toggle = document.querySelector('.dark-mode-switch')
@@ -145,6 +168,8 @@ dark_mode_toggle.onclick = () => {
     document.querySelector('body').classList.toggle('light')
     document.querySelector('body').classList.toggle('dark')
 }
+
+
 //let dia_selecionado = document.querySelector(".calendar-days ")
 //let dias = dia_selecionado.children
 //Clicar no quadrado
