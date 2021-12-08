@@ -65,36 +65,35 @@
                 <h1 id = "novoGrupoBar">Criar Grupo</h1><br>
                 <a type="button" class="fechaJanela" href="ListaContactos.html"><img class="fechar" src="Resources/back.png"></a>
             
-            <form id="frmNovoGrupo">
+            <form id="frmNovoGrupo" onkeyup="verificaInputs()">
                 <b><label for="name">Nome do grupo:</label></b>
                 <input type="text" id="inputNomeGrupo" name="name"><br><br>
                 <b><label for="participante">Participantes:</label></b><br><br>
 
               <div class = "participantesGrupo">
-                <input type="checkbox" classe="participante" name="participante" value="Carlos"> 
+                <input type="checkbox" classe="participante" name="participante" value="Carlos" onclick = "verificaChecks()"> 
                 <label for="carlos"> Carlos</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="David"> 
+                <input type="checkbox" classe="participante" name="participante" value="David" onclick = "verificaChecks()"> 
                 <label for="david"> David</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Filipe">  
+                <input type="checkbox" classe="participante" name="participante" value="Filipe" onclick = "verificaChecks()">  
                 <label for="filipe"> Filipe</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Francisco"> 
+                <input type="checkbox" classe="participante" name="participante" value="Francisco" onclick = "verificaChecks()"> 
                 <label for="francisco"> Francisco</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Joana">  
+                <input type="checkbox" classe="participante" name="participante" value="Joana" onclick = "verificaChecks()">  
                 <label for="joana"> Joana</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="João">
+                <input type="checkbox" classe="participante" name="participante" value="João" onclick = "verificaChecks()">
                 <label for="joao"> João</label><br><br>
-
-                <input type="checkbox" classe="participante" name="participante" value="Leonor">
+                <input type="checkbox" classe="participante" name="participante" value="Leonor" onclick = "verificaChecks()">
                 <label for="leonor"> Leonor</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Mafalda">
+                <input type="checkbox" classe="participante" name="participante" value="Mafalda" onclick = "verificaChecks()">
                 <label for="mafalda"> Mafalda</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Maria">
+                <input type="checkbox" classe="participante" name="participante" value="Maria" onclick = "verificaChecks()">
                 <label for="maria"> Maria</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Rui">
+                <input type="checkbox" classe="participante" name="participante" value="Rui" onclick = "verificaChecks()">
                 <label for="Rui"> Rui</label><br><br>
               </div>
               <br><br>
-              <button type="button" id = "botaoCriarGrupo"><h4>Criar</h4></button>
+              <button type="button" disabled id = "botaoCriarGrupo"><h4>Criar</h4></button>
             </form>
             <p id="alerta"></p>
             </div>

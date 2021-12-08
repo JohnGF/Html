@@ -519,7 +519,8 @@ button#botaoCriarGrupo:enabled{
     border-radius: 2em;
     color: #D4ECDD;
     border: #152D35 solid 3px;
-	
+	cursor: pointer;
+
 }
 
 button#botaoCriarGrupo:disabled{
@@ -569,12 +570,7 @@ img.fotoAtualUtilizador{
 	background-color: #112031;
 	margin: 5px;
 }
-#perfis div{
-	text-align: right;
-	position: absolute;
-	right: 5px;
-	bottom: 77px;
-}
+
 
 #alerta{
 	color: rgb(185, 0, 0);
@@ -666,7 +662,6 @@ div#escolhaFicheiro {
 	text-align: center;
 	font-size: 13pt;
 	z-index: 3;
-	border: groove #112031;
 	border-radius: 25px;
 	margin-left: -242px;
 }
@@ -737,6 +732,7 @@ button#enviaMensagem:disabled {
     height: 35px;
     cursor: pointer;
     background-color: #c1e4e2;
+
 }
 
 button#enviarMensagem:disabled {
@@ -799,6 +795,8 @@ button#enviarMensagem:disabled {
 	padding: 4px;
 	position: relative;
 	bottom: 40px;
+	cursor:default;
+
 }
 
 div.functions{
@@ -810,4 +808,27 @@ div.functions{
 	position: absolute;
 	right: 5px;
 	bottom: 77px;
+}
+
+button#botaoCriarContacto:enabled{
+	font-size: 20px;
+    background-color: #345B63;
+    width: 110px;
+    height: 40px;
+    border-radius: 2em;
+    color: #D4ECDD;
+    border: #152D35 solid 3px;
+	cursor: pointer;
+	
+}
+
+button#botaoCriarContacto:disabled{
+	font-size: 20px;
+    background-color: #4f666ab4;
+    width: 110px;
+    height: 40px;
+    border-radius: 2em;
+    color: #a1aea6;
+    border: #738084 solid 3px;
+	
 }

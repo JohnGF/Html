@@ -101,13 +101,14 @@ function mostraAvatares(nome){
         }
     } else{
         let part = grupos[nome];
-        for(var cada in part){
-            result += '<img src="Resources/Avatars/'+part[cada]+'Img.jpeg" height="260"/>' 
+        for(var cada in part){            
+            result += '<div class="cadaPart">'+'<img src="Resources/Avatars/'+part[cada]+'Img.jpeg" height="260"/> <span class="nomeParticipante">' + part[cada]+'</span></div>'
+ 
         }
         result += '<br>'
     }
     result += '<br>'
-    result += '<div><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
+    result += '<div id="meuAvatar" ><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
     return result;
 }
 
@@ -145,13 +146,13 @@ function removeChat() {
   }
 
 function mudarCam(nome){    
-    if (imagemAtiva == "EuMascA.png") {
+    if (imagemAtiva == "foto1.png") {
         imagemAtiva = "EuMascImg.jpeg"
         cam = "Resources/cam.png"
         localStorage.setItem('imagem', imagemAtiva);
 
     } else {
-        imagemAtiva = "EuMascA.png"
+        imagemAtiva = "foto1.png"
         cam = "Resources/noCam.png"
         localStorage.setItem('imagem', imagemAtiva);
     }

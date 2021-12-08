@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 
 <html lang = "pt">
-<!-- Header Menu of the Page -->
-
 <head>
  
-  <title>Página Inicial</title>
+  <title>Definições</title>
   
 </head>
 
@@ -14,10 +12,9 @@
 
   <header>
       <link rel="stylesheet" href="Styles/style.css">    
-      <!-- Top header menu containing
-          logo and Navigation bar -->
+      <link rel="stylesheet" href="Styles/definicoes.css"> 
+      <script src="Scripts/definicoes.js"></script>   
       <div id="top-header">               
-          <!-- Navigation Menu -->
           <nav>
             <div class="container">
               
@@ -26,31 +23,77 @@
                   <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
                   <li><a href="Agenda.html"><b>Agenda</b></a></li>
                   <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
-                  <li><a href="Definicoes.html"><b>Definições</b></a></li>
+                  <li><a class="menuChecked" href="Definicoes.html"><b>Definições</b></a></li>
                   <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
               </ul>
               </div>
             </div>
           </nav>
       </div>   
-      <!-- Image menu in Header to contain an Image and
-          a sample text over that image -->
       <div id="header-image-menu">
   
       </div>    
   </header>
 
-  <div class = "tituloDefinicoes"><b>Definições</b></div>
+  <section class="definicoes">
+    <div class="cartaoUpdate">
+      <h3>Foto de perfil </h3><br><br>
+      <p >Atual: </p> <img id="fotoAtual" alt="Foto Atual"><br><br>
+      <div id="abreformFoto" classe="abreForm" onclick="abreForm('formFoto')"> Alterar Foto </div><br>
+      <div id="formFoto" hidden >
+        <b><label for="novoNome">Clique na Foto que deseja: </label></b>
+        
+        <div class="slideshow-container">
 
-  <div class = "fotoUtilizador"> 
-    <img class = "fotoAtualUtilizador" src="Resources/Avatars/EuMascA.png"><br><br>
-    <button>Escolher nova foto</button>
-  </div>
+          <div class="mySlides" onclick="mudarFoto('foto1.png')">
+            <img src="Resources/Avatars/foto1.png">
+          </div>
+          
+          <div class="mySlides" onclick="mudarFoto('foto2.png')">
+            <img src="Resources/Avatars/foto2.png">
+          </div>
+          
+          <div class="mySlides" onclick="mudarFoto('foto3.png')">
+            <img src="Resources/Avatars/foto3.png">
+          </div>
 
-  <div class = "fotoUtilizador"> 
-    <input type="text" class = "nomeUtilizador">
-    <button>Alterar nome</button>
-  </div>
+          <div class="mySlides" onclick="mudarFoto('foto4.png')">
+            <img src="Resources/Avatars/foto4.png">
+          </div>
+
+          <div class="mySlides" onclick="mudarFoto('foto5.png')">
+            <img src="Resources/Avatars/foto5.png">
+          </div>
+
+          <div class="mySlides" onclick="mudarFoto('foto6.png')">
+            <img src="Resources/Avatars/foto6.png">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+          </div>
+        </div>
+
+    </div>
+
+  
+    <!-- <div class="cartaoUpdate">
+        <h3>Modo Escuro</h3>
+        <p></p>
+    </div> -->
+  
+  </section>
 
 </body>
 

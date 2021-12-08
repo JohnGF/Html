@@ -20,7 +20,7 @@ let grupos = {};
 
 let contactos;
 
-let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "João", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
+let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
 
 let imagemAtiva = localStorage.getItem('imagemEscolhida')
 
@@ -61,6 +61,38 @@ function defineEventHandlersParaElementosHTML() {
       addEventListener("click", verificaDados);
 }
 
+function verificaInputs() {
+    var ParticipantesGrupo = getChecked()    
+    if(document.getElementById("inputNomeGrupo").value==""){ 
+        document.getElementById('botaoCriarGrupo').disabled = true;
+    } if ( ParticipantesGrupo == false) {
+        document.getElementById('botaoCriarGrupo').disabled = true;
+    } if (document.getElementById("inputNomeGrupo").value!="" && ParticipantesGrupo == true ) {
+        document.getElementById('botaoCriarGrupo').disabled = false;
+    }
+}
+
+function getChecked() {
+    var selecionados = document.querySelectorAll('[name=participante]:checked');
+    if( selecionados.length == 0){
+        console.log(false)
+        return false;
+    }else{
+        console.log(true)
+        return true;
+    }
+  }
+
+function verificaChecks() {
+    var selecionados = document.querySelectorAll('[name=participante]:checked');
+    console.log("teste")
+    if (selecionados.length > 0){
+        verificaInputs()
+    } else {
+        document.getElementById('botaoCriarGrupo').disabled = true;
+    }
+}
+
 
 function verificaDados(){
    
@@ -89,7 +121,7 @@ function verificaDados(){
     if(dadosValidos) { 
         
         dados = obtemDados();
-        gravaHistorico(dados);
+        gravaHistoricoGrupos(dados);
         formulario.reset();
     }
     
@@ -112,9 +144,25 @@ function carregaHistorico() {
 }
 
 
-function gravaHistorico() {
-    localStorage.setItem("grupos", JSON.stringify(grupos));
-}
+function criaContacto(){
+    var nomeContacto = document.getElementById("inputNomeContacto").value
+    gravaHistoricoContactos(nomeContacto);
+    nomeContacto = ""
+    document.getElementById("inputEmailContacto").value = ""
+    window.location.href = "ListaContactos.html";
+ } 
+ 
+ 
+ function gravaHistoricoGrupos() {
+     localStorage.setItem("grupos", JSON.stringify(grupos));
+ }
+ 
+ function gravaHistoricoContactos(nomeContacto) {
+     contactos = JSON.parse(localStorage.getItem("contactos")) 
+     contactos.push(nomeContacto)
+     localStorage.setItem("contactos", JSON.stringify(contactos));
+     
+ }
 
 function mostraContactos(){
     var funcionalidade;
@@ -157,8 +205,16 @@ function adicionaContactos(funcionalidade){
             elemento.innerHTML += '<img src="Resources/Avatars/user.png" height="40"/>  <p>' + contactos[nome] + '</p>'
         }
         div.appendChild(elemento);
-
     }
+}
+
+function verificaContacto() {
+    var nomeContacto = document.getElementById("inputNomeContacto")
+   if (nomeContacto.value != ""){
+    document.getElementById('botaoCriarContacto').disabled = false;
+   } else {
+    document.getElementById('botaoCriarContacto').disabled = true;
+   }
 }
 
 

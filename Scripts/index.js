@@ -6,15 +6,16 @@ let contactos = [];
 function principal(){
     if (localStorage.getItem('wasVisited' )== undefined){
         localStorage.setItem('wasVisited', false);
-        localStorage.setItem('imagemEscolhida', "EuMascA.png");
+        localStorage.setItem('imagemEscolhida', "foto1.png");
         localStorage.setItem('imagem', "EuMascImg.jpeg");
-        localStorage.setItem('avatar', "EuMascA.png");
+        localStorage.setItem('avatar', "foto1.png");
         adicionaGrupos();
-        contactos = ["Carlos", "David", "Filipe", "Francisco", "João", "Joana", "Leonor", "Mafalda", "Maria", "Rui"];
+        contactos = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"];
         localStorage.setItem("historicoProjetoIC" , "");
         localStorage.setItem("historicoAmigos" , "");
         localStorage.setItem("historicoFamília" , "");
         localStorage.setItem("historicoIC002" , "");
+        
         for (let i = 0; i < contactos.length; i++){
             localStorage.setItem("historico" + contactos[i] , "");
         }
@@ -28,7 +29,7 @@ function principal(){
 function adicionaGrupos(){
     grupos["Projeto IC"] = ["Carlos", "Francisco", "Leonor", "Mafalda"]
     grupos["Amigos"] = ["David", "Filipe", "Mafalda", "Maria"]
-    grupos["Família"] = ["João", "Joana", "Rui"]
+    grupos["Família"] = ["Joao", "Joana", "Rui"]
     grupos["IC002"] = ["Carlos", "David", "Leonor"]
 }
 
