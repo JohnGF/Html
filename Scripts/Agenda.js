@@ -10,7 +10,11 @@ let s_day_id=0
 let dia_atual=document.querySelector("#dia_selecionado")
 let eventos_window=document.querySelector("#display-eventos") //bloco com os eventos
 let titulo_eventos=document.querySelector("#titulo") //titulos
-
+let lixo=document.querySelector(".lixo")
+let ajuda_lixo=document.querySelector(".ajuda")
+lixo.addEventListener("mouseover",function(){ajuda_lixo.hidden=false;console.log("u hover me")})
+lixo.addEventListener("mouseout",function(){ajuda_lixo.hidden=true;console.log("u hover me")})
+//Gerador de eventos
 function event_window(id){
     eventos_window.style.display = "none";
     document.getElementById("popup").style.display = "block";
@@ -28,11 +32,13 @@ function event_window(id){
         tempo_h=json_aid.tempo_h
         tempo_m=json_aid.tempo_m
 
-        var infonode = document.createTextNode("Dia "+dia+ " Horas: "+tempo_h+"h"+tempo_m);
+        var infonode = document.createTextNode("Dia "+dia+ " Horas: "+tempo_h+"h"+tempo_m+" "+texto);
+
         //var textnode = document.createTextNode(texto);
         var evento = document.createElement("p");
         evento.setAttribute("class", "eventos");
         evento.appendChild(infonode);
+        evento.addEventListener("dblclick",function(){evento.remove()})
         //evento.appendChild(textnode);
         eventos_window.append(evento);
     }
@@ -60,7 +66,8 @@ function eventos_dia(key){
     document.getElementById("popup").style.display = "none";
     eventos_window.style.display = "block";
 }
-const b_salvar=document.querySelector(".salvar")
+
+let b_salvar=document.querySelector(".salvar")
 b_salvar.addEventListener("click",function(){eventos_dia(s_day_id)})
 
 

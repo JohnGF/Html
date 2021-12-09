@@ -108,7 +108,7 @@ function mostraAvatares(nome){
         result += '<br>'
     }
     result += '<br>'
-    result += '<div id="meuAvatar" ><img src="Resources/Avatars/'+ imagemAtiva+'" height="150"/></div>'
+    result += '<div id="meuAvatar" ><img src="Resources/Avatars/'+ imagemVideo+'" height="150"/></div>'
     return result;
 }
 
@@ -146,15 +146,18 @@ function removeChat() {
   }
 
 function mudarCam(nome){    
-    if (imagemAtiva == "foto1.png") {
-        imagemAtiva = "EuMascImg.jpeg"
+    if (imagemVideo == avatar) {
+        imagemVideo = imagem
+
         cam = "Resources/cam.png"
-        localStorage.setItem('imagem', imagemAtiva);
+        acaoCam = "Desligar Cam"
+        localStorage.setItem('imagemVideo', imagemVideo);
 
     } else {
-        imagemAtiva = "foto1.png"
+        imagemVideo = avatar
         cam = "Resources/noCam.png"
-        localStorage.setItem('imagem', imagemAtiva);
+        acaoCam = "Ligar Cam"
+        localStorage.setItem('imagemVideo', imagemVideo);
     }
     abreChamada(nome)
 }
@@ -162,9 +165,11 @@ function mudarCam(nome){
 function mudarMic(nome){    
     if (mic == "Resources/Mute.png") {
         mic = "Resources/mic.png"
+        acaoMic = "Desligar Mic"
 
     } else {
         mic = "Resources/Mute.png"
+        acaoMic = "Ligar Mic"
     }
     abreChamada(nome)
 }
@@ -172,9 +177,10 @@ function mudarMic(nome){
 function mudarAudio(nome){    
     if (audio == "Resources/audio_mute.png") {
         audio = "Resources/audio.png"
-
+        acaoAudio = "Desligar Audio"
     } else {
         audio = "Resources/audio_mute.png"
+        acaoAudio = "Ligar Audio"
     }
     abreChamada(nome)
 }

@@ -26,7 +26,7 @@
                 <div class="menuLeft">
                     <ul> 
                         <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
-                        <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                        <li><a class="menuChecked" href="Agenda.html"><b>Agenda</b></a></li>
                         <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
                         <li><a href="Definicoes.html"><b>Definições</b></a></li>
                         <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
@@ -42,8 +42,11 @@
         
     </header>
 <div class="light">
+    <div class="lixo" ><img src="Resources/lixo_light.png" alt="Caixote do lixo"></div>
+    <div class="ajuda" hidden>Clique duas vezes num evento para o apagar</div>
     <div id="display-eventos" class="scroll">
         <div class="titulo">Eventos Marcados</div>
+        
   
 
 
@@ -97,7 +100,7 @@
         
         
         <textarea name="text" id="eventos_dia" cols="30" rows="10"></textarea>
-        <button class="salvar">Salvar</button>
+        <button class="salvar">Gravar</button>
     </div>
     <div class="calendar">
         <div class="calendar-header">
@@ -126,12 +129,12 @@
             <div class="calendar-days"></div>
         </div>
         <div class="calendar-footer">
-            <div class="toggle">
+            <!-- <div class="toggle">
                 <span>Dark Mode</span>
                 <div class="dark-mode-switch">
                     <div class="dark-mode-switch-ident"></div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="month-list"></div>
     </div>

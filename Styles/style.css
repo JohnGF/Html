@@ -18,7 +18,7 @@ body,html{
 #container {
     width: 1280px;
     height: 720px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     position: fixed;
     top: 50%;
@@ -163,6 +163,7 @@ td .listaContactos {
 	margin-left: 10px;
     padding: 0;
     overflow: auto;
+	
 }
 
 
@@ -559,9 +560,11 @@ img.fotoAtualUtilizador{
 }
 
 #perfis{
-	margin-top: -40px;
 	width: 700px;
 	margin-left: 0px;
+	margin-right: 283px;
+	margin-top: -20px;
+
 	
 }
 #perfis img{
@@ -799,10 +802,6 @@ button#enviarMensagem:disabled {
 
 }
 
-div.functions{
-	z-index: 2;
-}
-
 #meuAvatar{
 	text-align: right;
 	position: absolute;
@@ -832,3 +831,27 @@ button#botaoCriarContacto:disabled{
     border: #738084 solid 3px;
 	
 }
+
+td.listaContactos{
+	position: absolute;
+	top: 56px;
+	border-radius: 0%;
+	height: 92.2%;
+}
+
+div.functions{
+	left: 300px;
+	border-radius: 0;
+	width: 980px;
+	z-index: 2;
+}
+
+#conversa, .descricaoGrupo{
+	left: 300px;
+}
+
+#conversa{
+	height: 92.2;
+	bottom: -20px;
+}
+

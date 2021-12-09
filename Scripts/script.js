@@ -22,17 +22,17 @@ let contactos;
 
 let contactosInicial = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"]
 
-let imagemAtiva = localStorage.getItem('imagemEscolhida')
-
 let imagem = localStorage.getItem('imagem')
+
+let imagemVideo = localStorage.getItem('imagemVideo')
 
 let avatar = localStorage.getItem('avatar')
 
 let cam = "Resources/noCam.png";
 
-let mic = "Resources/Mute.png";
+let mic = "Resources/mic.png";
 
-let audio = "Resources/audio_mute.png";
+let audio = "Resources/audio.png";
 
 
 
@@ -75,17 +75,14 @@ function verificaInputs() {
 function getChecked() {
     var selecionados = document.querySelectorAll('[name=participante]:checked');
     if( selecionados.length == 0){
-        console.log(false)
         return false;
     }else{
-        console.log(true)
         return true;
     }
   }
 
 function verificaChecks() {
     var selecionados = document.querySelectorAll('[name=participante]:checked');
-    console.log("teste")
     if (selecionados.length > 0){
         verificaInputs()
     } else {

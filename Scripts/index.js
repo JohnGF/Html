@@ -6,8 +6,8 @@ let contactos = [];
 function principal(){
     if (localStorage.getItem('wasVisited' )== undefined){
         localStorage.setItem('wasVisited', false);
-        localStorage.setItem('imagemEscolhida', "foto1.png");
         localStorage.setItem('imagem', "EuMascImg.jpeg");
+        localStorage.setItem('imagemVideo', "foto1.png");
         localStorage.setItem('avatar', "foto1.png");
         adicionaGrupos();
         contactos = ["Carlos", "David", "Filipe", "Francisco", "Joao", "Joana", "Leonor", "Mafalda", "Maria", "Rui"];

@@ -71,26 +71,17 @@
                 <b><label for="participante">Participantes:</label></b><br><br>
 
               <div class = "participantesGrupo">
-                <input type="checkbox" classe="participante" name="participante" value="Carlos" onclick = "verificaChecks()"> 
-                <label for="carlos"> Carlos</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="David" onclick = "verificaChecks()"> 
-                <label for="david"> David</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Filipe" onclick = "verificaChecks()">  
-                <label for="filipe"> Filipe</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Francisco" onclick = "verificaChecks()"> 
-                <label for="francisco"> Francisco</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Joana" onclick = "verificaChecks()">  
-                <label for="joana"> Joana</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="João" onclick = "verificaChecks()">
-                <label for="joao"> João</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Leonor" onclick = "verificaChecks()">
-                <label for="leonor"> Leonor</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Mafalda" onclick = "verificaChecks()">
-                <label for="mafalda"> Mafalda</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Maria" onclick = "verificaChecks()">
-                <label for="maria"> Maria</label><br><br>
-                <input type="checkbox" classe="participante" name="participante" value="Rui" onclick = "verificaChecks()">
-                <label for="Rui"> Rui</label><br><br>
+
+                <div onclick="clicaParticipante('carlos')"><input type="checkbox" id="carlos" classe="participante" name="participante" value="Carlos" onclick = "verificaChecks()"><label for="carlos"> Carlos</label></div><br><br>
+                <div onclick="clicaParticipante('david')"><input type="checkbox" id="david" classe="participante" name="participante" value="David" onclick = "verificaChecks()"><label for="david"> David</label></div><br><br>
+                <div onclick="clicaParticipante('filipe')"><input type="checkbox" id="filipe" classe="participante" name="participante" value="Filipe" onclick = "verificaChecks()"><label for="filipe"> Filipe</label></div><br><br>
+                <div onclick="clicaParticipante('francisco')"><input type="checkbox" id="francisco" classe="participante" name="participante" value="Francisco" onclick = "verificaChecks()"><label for="francisco"> Francisco</label></div><br><br>
+                <div onclick="clicaParticipante('joana')"><input type="checkbox" id="joana" classe="participante" name="participante" value="Joana" onclick = "verificaChecks()"><label for="joana"> Joana</label></div><br><br>                          
+                <div onclick="clicaParticipante('joao')"><input type="checkbox" id="joao" classe="participante" name="participante" value="João" onclick = "verificaChecks()"><label for="joao"> João</label></div><br><br>                              
+                <div onclick="clicaParticipante('leonor')"><input type="checkbox" id="leonor" classe="participante" name="participante" value="Leonor" onclick = "verificaChecks()"><label for="leonor"> Leonor</label></div><br><br>          
+                <div onclick="clicaParticipante('mafalda')"><input type="checkbox" id="mafalda" classe="participante" name="participante" value="Mafalda" onclick = "verificaChecks()"><label for=""> Mafalda</label></div><br><br>
+                <div onclick="clicaParticipante('maria')"><input type="checkbox" id="maria" classe="participante" name="participante" value="Maria" onclick = "verificaChecks()"><label for="maria"> Maria</label></div><br><br>
+                <div onclick="clicaParticipante('rui')"><input type="checkbox" id="rui" classe="participante" name="participante" value="Rui" onclick = "verificaChecks()"><label for="rui"> Rui</label></div><br><br>
               </div>
               <br><br>
               <button type="button" disabled id = "botaoCriarGrupo"><h4>Criar</h4></button>

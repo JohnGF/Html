@@ -182,7 +182,7 @@ body {
 
 .calendar-days div.curr-date,
 .calendar-days div.curr-date:hover {
-    background-color: var(--blue);
+    background-color: #152D35;
     color: var(--white);
     border-radius: 50%;
 }
@@ -336,12 +336,14 @@ body {
     top: 70px;
 }
 .Event_box .salvar{
-position: relative;
-top: 100px;
-
-right: 20px;
-left: 20px;
-border-radius: 25px;
+    position: relative;
+    top: 100px;
+    right: 20px;
+    left: 20px;
+    border-radius: 25px;
+    font-size: 20px;
+    /* margin: 5px; */
+    padding: 5px;
 }
 .Event_box #tempo{
     position: absolute;
@@ -370,7 +372,7 @@ border-radius: 25px;
     /* right: 10px; */
     /* top: 10px; */
     height: 25px;
-    background-color: #141529;
+    background-color: #152D35;
     border-radius: 5px;
     position: relative;
     /* align-items: center; */
@@ -379,6 +381,11 @@ border-radius: 25px;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 30px;
+    cursor: default;
 }
 
 /*  */
@@ -467,6 +474,33 @@ body{
 #eventos_dia{
     width: 255px;
     height: 150px;
+}
+.lixo {
+    width: 25px;
+    height: 25px;
+    right: 15px;
+    position: absolute;
+    top: 15px;
+}
+.lixo img{
+
+    width: 25px;
+    height: 25px;
+    /* right: 15px; */
+    /* position: relative; */
+    /* top: 15px; */
+}
+.ajuda{
+    border-color: white;
+    background: #D4ECDD;
+    padding: 5px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 5px;
+    background: white;
+    top: 66px;
+    right: 5px;
+    border: 2px;
 }
 
  /* Popup container */

@@ -166,6 +166,17 @@ function clicaFicheiro(id){
 }
 
 
+function clicaParticipante(id){
+    let elemento = document.getElementById(id);
+    if (elemento.checked){
+        elemento.checked = false;
+    } else {
+        elemento.checked = true;
+    }
+    
+}
+
+
 function enviaEnterConversa(){
     var input = document.getElementById("mensagemConversa");
     input.addEventListener("keyup", function(event) {
