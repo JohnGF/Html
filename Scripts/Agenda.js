@@ -52,8 +52,9 @@ function event_window(id){
     //document.getElementById(id).innerHTML = new HTML
     //sessionStorage.setItem(id,window.prompt("Enter your name: "))
 }
+
 //botão salvar agenda
-function eventos_dia(key){
+function eventos_dia(key,mostrar){
     let s_day_v=document.getElementById(key)
     let event_info_day ={
         dia:s_day_v.getAttribute("dia"),
@@ -62,7 +63,8 @@ function eventos_dia(key){
         texto:text.value
     }
     //sessionStorage.setItem(key,text.value)  
-    sessionStorage.setItem(key,JSON.stringify(event_info_day))  
+    sessionStorage.setItem(key,JSON.stringify(event_info_day))
+    event_window(key)  
     document.getElementById("popup").style.display = "none";
     eventos_window.style.display = "block";
 }
@@ -169,12 +171,12 @@ document.querySelector('#next-year').onclick = () => {
     eventos_window.innerHTML='<div class="titulo">Eventos Marcados</div>';
 }
 
-let dark_mode_toggle = document.querySelector('.dark-mode-switch')
+// let dark_mode_toggle = document.querySelector('.dark-mode-switch')
 
-dark_mode_toggle.onclick = () => {
-    document.querySelector('body').classList.toggle('light')
-    document.querySelector('body').classList.toggle('dark')
-}
+// dark_mode_toggle.onclick = () => {
+//     document.querySelector('body').classList.toggle('light')
+//     document.querySelector('body').classList.toggle('dark')
+// }
 
 
 //let dia_selecionado = document.querySelector(".calendar-days ")

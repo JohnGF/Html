@@ -711,6 +711,7 @@ div#escolhaFicheiro {
 .logoContactos {
 	max-height: 300px;
 	max-width: 300px;
+	margin-left: 290px;
 }
 
 
@@ -855,3 +856,8 @@ div.functions{
 	bottom: -20px;
 }
 
+#novoContacto div {
+	height: 300px;
+	top: 230px;
+	left: 605px;
+}
