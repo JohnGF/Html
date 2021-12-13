@@ -1,0 +1,114 @@
+.definicoes {
+    display: flex;
+    height: max-content;
+    text-align: center;
+    margin: 15px;
+    margin-top: 30px;
+    cursor: default;
+}
+  
+.cartaoUpdate{
+    width: 500px;
+    min-height: 20px;
+    overflow: hidden;
+    border-radius: .5em;
+    background: white;
+    margin: auto;
+    padding: 1%;
+    transition: .45s ease;
+    border: groove 2px #152D35 ;
+}
+
+h3 {
+    color: #2E3C40;
+    width: 200px;
+    font-size: 18pt;
+    font-weight: 600;
+    line-height: 1;
+    margin: 10px;
+    padding: 2px;
+    border-bottom: 2px solid #345B63;
+    transition: color .45s ease, border .45s ease;
+}
+
+p {
+    color: #152D35;
+    margin: auto auto;
+    transition:  0.45s ease-in-out;
+}
+
+.mySlides {
+    display: none;
+    height: 170px;
+}
+
+#formFoto img , #fotoAtual{
+    vertical-align: middle;
+    height: 200px;
+    margin: 5px;
+}
+
+#fotoAtual{
+    height: 150px;
+    margin: 5px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  width: 5px;
+  padding: 0;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  right: 350px;
+  height: 200px;
+  width: 50px;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#abreformFoto{
+    font-size: 20px;
+    background-color: #345B63;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: #D4ECDD;
+    border: #152D35 solid 3px;
+    margin: auto;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s ease;
+  margin-top: 30px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}

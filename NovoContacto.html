@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang = "pt">
+<!-- Header Menu of the Page -->
+
+<head>
+ 
+  <title>Novo Contacto</title>
+  
+</head>
+
+<body id="container">
+
+
+  <header>
+      <link rel="stylesheet" href="Styles/style.css"> 
+      <script src="Scripts/script.js"></script>   
+      <script src="Scripts/Conversa.js"></script> 
+   
+      <!-- Top header menu containing
+          logo and Navigation bar -->
+      <div id="top-header">               
+          <!-- Navigation Menu -->
+          <nav>
+            <div class="container">
+              
+              <div class="menuLeft">
+                <ul> 
+                  <li ><a id="logoBar" href="index.html" ><img height="40px" src="Resources\Logo.png"  alt="Logo da Aplicação"/></a></li>
+                  <li><a href="Agenda.html"><b>Agenda</b></a></li>
+                  <li><a href="ListaContactos.html"><b>Contactos</b></a></li>
+                  <li><a href="Definicoes.html"><b>Definições</b></a></li>
+                  <li><a href="Ajuda.html"><b>Ajuda</b></a></li>
+              </ul>
+              </div>
+            </div>
+          </nav>
+      </div>   
+      <!-- Image menu in Header to contain an Image and
+          a sample text over that image -->
+      <div id="header-image-menu">
+  
+      </div>
+
+  </header>
+
+    <table>
+      <tbody>
+        <tr> <br>
+          <td class = "listaContactos"> 
+            <div class="scroll">
+              <h2>Lista de Contactos </h2><hr> 
+              <h3>Grupos</h3> 
+              <a class = "novo" href="NovoGrupo.html"><img src="Resources/new.png" height="40" alt=""></a><br>
+              <div id="grupos"></div>
+              <h3>Contactos</h3> <a class = "novo" href="NovoContacto.html"><img src="Resources/new.png" height="40" alt=""></a> <br>
+              <div id="contactos"></div>
+              
+            </div>
+            
+          </td>
+
+        <td class = "novoGrupo tdConversa" id="novoContacto">
+            <div id = "novoGrupo">
+                <h1 id = "novoGrupoBar">Adicionar Contacto</h1><br>
+                <a type="button" class="fechaJanela" href="ListaContactos.html"><img class="fechar" src="Resources/back.png"></a>
+            
+            <form id="frmNovoContacto" onkeyup="verificaContacto()">
+                <b><label for="name">Nome do Contacto:</label></b>
+                <input type="text" id="inputNomeContacto" name="name"><br><br><br>
+                <b><label for="email">Email (opcional):</label></b>
+                <input type="email" id="inputEmailContacto" name="email"><br><br><br>
+
+              <button type="button" disabled onclick="criaContacto()" id = "botaoCriarContacto"><h4>Adicionar</h4></button>
+            </form>
+            <p id="alerta"></p>
+            </div>
+        </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>
